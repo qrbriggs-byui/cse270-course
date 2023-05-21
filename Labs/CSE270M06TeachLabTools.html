@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../site/style.css" />
+    <title>CSE 270 Teach Lab M06: Testing Tools</title>
+</head>
+
+<body>
+<header id="courseTitle">
+        <span class="icon-byui-logo"></span>
+        <h1>CSE 270 Teach Lab M06: Testing Tools</h1>
+    </header>
+
+<article>
+	<h1>Lab 06 - Install Selenium</h1>
+    <h2>Overview</h2>
+    <p>Install Selenium automated testing program on your Windows box. </p>
+    <h2>Assignment</h2>
+    <h3>Instructions for installing Microsoft Visual Studio Community with Python</h3>
+    <p>If you have not installed Microsoft Visual Studio, please do. Visual Studio  Community is not Visual Studio Code. (Selenium will not work for Code.) (2.61 GB download)<br>
+      <a href="https://docs.microsoft.com/en-us/visualstudio/python/tutorial-working-with-python-in-visual-studio-step-00-installation?view=vs-2019">Install  Python for Visual Studio&nbsp;</a></p>
+    <h3>install Webdriver on Local Machine</h3>
+    <p>For Selenium to work on your project, you need to install the web driver  associated with your preferred browser. <br>
+      You will need to know if you are working on a 32-bit or 64-bit system. If you  don't know, look up how to do it online, depending on your Operating System.  Most systems are 64-bit. If that doesn't work, then try 32-bit. <br>
+      You will need to create a directory to store the Selenium web driver. I would  suggest 'C:\Program Files\SeleniumDriver.' You will then need to add the Path  to the system.<br>
+      For example, for Windows 10</p>
+    <ul type="disc">
+      <li>Right-click       on My Computer or This PC from File Explorer</li>
+      <li>Select       Change Setting, bottom right corner</li>
+      <li>System       Properties window pops up; click on Advanced</li>
+      <li>You should       see Environment Variables.</li>
+      <li>From       &quot;User variables...&quot;, click Path, and then Edit button.</li>
+      <li>From the       &quot;Edit environment variables&quot; window, click New</li>
+      <li>Copy       &quot;C:\Program Files\SeleniumDriver&quot;.</li>
+      <li>Click Ok       to all dialogs</li>
+    </ul>
+    <p><strong>Restart MS Visual Studio( this will reset the Path inside MS Visual  Studio to find the Path). </strong><br>
+      There are several options for which browser to use. If your preferred  browser is not on this list, you are on your own, sorry. </p>
+    <ul type="disc">
+      <li>Firefox </li>
+      <ul type="circle">
+        <li>Go        to this website:        https://www.guru99.com/gecko-marionette-driver-selenium.html</li>
+        <li>From        the &quot;Download and Install Gecko Driver&quot; web page, click on the        link: <a href="https://github.com/mozilla/geckodriver/releases">https://github.com/mozilla/geckodriver/releases</a></li>
+        <li>From        the &quot;Release - Mozilla&quot; web page, choose your operating system. </li>
+        <ul type="square">
+          <li>For         example, I am running Window 10 64-bit, and so I choose: <a href="https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-win64.zip">geckodriver-v0.26.0-win64.zip</a></li>
+          <li>This         downloads the zip file, open the file.</li>
+        </ul>
+        <li>From        the zip or gz file, move the geckodriver* executable to the        SeleniumDriver directory</li>
+      </ul>
+      <li>Internet       Explorer </li>
+      <ul type="circle">
+        <li>You        will need to know what version of Internet Explorer you are using. </li>
+        <li>Go        to this website:        http://selenium-release.storage.googleapis.com/index.html </li>
+        <li>From        the index, choose your IE version, i.e., 3.9</li>
+        <li>From        the directory, choose either 64 or 32 bit IEDriverServer*zip file.</li>
+        <ul type="square">
+          <li>This         downloads the zip file, open the file. </li>
+        </ul>
+        <li>From        the zip or gz file, move the IEDriverServer* executable to the        SeleniumDriver directory</li>
+      </ul>
+      <li>Chrome </li>
+      <ul type="circle">
+        <li>Go        to this website:        https://sites.google.com/a/chromium.org/chromedriver/home </li>
+        <li>From        the &quot;ChromeDriver&quot; webpage, and under the section &quot;All        version available in Downloads,&quot; click on &quot;Current        stable&nbsp;release:&nbsp;<a href="https://chromedriver.storage.googleapis.com/index.html?path=80.0.3987.106/" target="_blank">ChromeDriver 80.0.3987.106&quot;<br>
+        </a></li>
+        <li>From        the index, choose your chromedriver*</li>
+        <ul type="square">
+          <li>This         download the zip file, open the file. </li>
+        </ul>
+        <li>From        the zip or gz file, move the chromedriver* executable to the        SeleniumDriver directory </li>
+      </ul>
+    </ul>
+    <h3>Instructions for Downloading and InstallING SELENIUM</h3>
+    <p>We now need to create a python project in Visual Studio. </p>
+    <ul type="disc">
+      <li>From       Visual Studio's File Menu, click File:New: Project</li>
+      <li>From New       Project, change the name to CSE270Lab06 </li>
+      <ul type="circle">
+        <li>This        will create a new project with a new python file</li>
+      </ul>
+      <li>From       Solution Explorer, click the arrow next to Python Environment to get       Python to show up</li>
+      <li>From       Solution Explorer, right-click on &quot;Python *,&quot; and click       &quot;Install Python Package.&quot;</li>
+      <li>In the       &quot;Python Environments&quot; in the search, type selenium, click on       &quot;Run command: pip install Selenium&quot;</li>
+    </ul>
+    <h3>Instruction for testing selenium</h3>
+    <p>In the empty py file, copy and paste the following Code. </p>
+    <pre>&nbsp;</pre>
+    <pre>from Selenium import common</pre>
+    <pre>from selenium import webdriver</pre>
+    <pre>from Selenium.webdriver.common.by import By</pre>
+    <pre>from Selenium.webdriver.common.keys import Keys</pre>
+    <pre>from time import sleep</pre>
+    <pre>&nbsp;</pre>
+    <pre># Uncomment out the corresponding browser webdrive you downloaded    </pre>
+    <pre>browser = webdriver.Ie()</pre>
+    <pre>#browser = webdriver.Firefox()</pre>
+    <pre>#browser = webdriver.Chrome()</pre>
+    <pre>&nbsp;</pre>
+    <pre>browser.get('http://classic.tiddlywiki.com')</pre>
+    <pre>          </pre>
+    <pre>sleep(5)</pre>
+    <pre>browser.find_element(By.LINK_TEXT, &quot;close others&quot;).click()</pre>
+    <pre>browser.find_element(By.LINK_TEXT, &quot;close&quot;).click()</pre>
+    <pre>browser.find_element(By.LINK_TEXT, &quot;Examples&quot;).click()</pre>
+    <pre>          </pre>
+    <pre>sleep(5);</pre>
+    <pre>browser.quit();</pre>
+    <pre>        </pre>
+    <p>&nbsp;Run the project. The Code will open up your browser with the webpage  classic.tiddlywiki.com, close all of the tiddlers, and then open up Examples.  Within 5 seconds, it will close.<br>
+      If this doesn't happen, look at the output in the terminal. Troubleshoot at  this point.&nbsp; &nbsp; &nbsp;&nbsp;</p>
+    <!--h2>Submission</h2>
+    <p>Post your Code for Testing. Post any problems that you encountered or lessons  that you experienced. </p>
+    <h2>Rubric</h2>
+    <p>Use the following rubric to help understand the expectation. </p>
+    <table border="0" cellpadding="0">
+      <tr>
+        <td><p align="center"><strong>&nbsp;</strong></p></td>
+        <td><p align="center"><strong>Exceptional<br>
+          100%</strong></p></td>
+        <td><p align="center"><strong>Good<br>
+          90%</strong></p></td>
+        <td><p align="center"><strong>Acceptable<br>
+          70%</strong></p></td>
+        <td><p align="center"><strong>Developing<br>
+          50%</strong></p></td>
+        <td><p align="center"><strong>Missing<br>
+          0%</strong></p></td>
+      </tr>
+      <tr>
+        <td><p align="center"><strong>Assignment 90%</strong></p></td>
+        <td><p>Summary of Problems or Lessons Learned</p></td>
+        <td><p>Install &amp; Test Selenium</p></td>
+        <td><p>Install Webdriver</p></td>
+        <td><p>Install MS Visual Studio</p></td>
+        <td><p>No original post</p></td>
+      </tr>
+      <tr>
+        <td><p align="center"><strong>Professionalism<br>
+          10%</strong></p></td>
+        <td><p>The paper is easy to read and communicated.</p></td>
+        <td><p>Properly cited, there are no grammar or spelling errors,    and the writing style is &quot;professional.&quot;</p></td>
+        <td><p>Found an instance of a spelling error, grammar error,    incomplete citation, overly verbose wording, poor formatting, or poor    writing. </p></td>
+        <td><p>A citation is missing where one is needed (plagiarism    alert!).</p></td>
+        <td><p>Gross spelling/grammar errors or other aspects of the    writing that make the paper difficult to read.</p></td>
+      </tr>
+    </table-->
+</article>
+</body>
+</html>

@@ -1,0 +1,191 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../site/style.css" />
+    <title>CSE 270: W03 Research: Software Methodology</title>
+  </head>
+  <body>
+    <header id="courseTitle">
+      <span class="icon-byui-logo"></span>
+      <h1>CSE 270: W03 Research: Software Methodology</h1>
+    </header>
+    <article>
+      <p>The reading gave you a background in software life-cycle-based testing. Today, you and your partner(s) will select a software development methodology and research how it works with testing. At the end of the week, you will describe how to conduct testing activities within that methodology.</p>
+      <h2>Select a Software Development Methodology</h2>
+      <p>With your partner(s), select a software development methodology you would like to study this week. There are several options. Your job is to choose one. You can pick from the following list or select one of your own.</p>
+      <ul type="disc">
+        <li>Code      and Fix - Concept Dev, Code and Fix, Release</li>
+        <li>Waterfall      – Requirements, Design, Implementation, Testing, </li>
+        <li>Spiral      – Objectives, Planning, Risk Analysis, Prototyping, Requirement      Validation, Design V&amp;V, Simulations/Models/Benchmarks, Detailed      Design, Unit test, Integration Test, Acceptance Test, Spirals 1,2,3,4</li>
+        <li>Incremental      – Req, Analysis, Design, Implementation, Testing, Deployment, Maintenance</li>
+        <li>Agile-      Brainstorm, Design, Develop, QA, Deployment</li>
+        <ul type="circle">
+          <li>XP       – Release Plan, Iteration Plan, Acceptance Test, Unit Test, Pair       Programming</li>
+          <li>Scrum       – Sprint Planning (Release Planning), Sprint (Iteration), Review (Test),       Retrospective (Lesson learned, Objective)</li>
+        </ul>
+        <li>Continuous      Integrations and Development – Agile, Integration, Delivery, Deployment, </li>
+        <li>DevOps      – Plan, Code, Build, Test, Release, Deploy, Operate, Monitor</li>
+      </ul>
+      <p>The software has a lifecycle, much like a butterfly or moth. Each phase of the development lifecycle can use different methodologies. Each Methodology introduced more detail to each lifecycle phase. </p>
+      <ul type="disc">
+        <li>Concept      of Operation </li>
+        <ul type="circle">
+          <li>Concept</li>
+          <ul type="square">
+            <li>The        software concept is in Code &amp; Fix, Spiral, and V-Model methodologies.        The idea is one of the first stages of the customer's requirement,        elicitating what they want and how they think it should work.</li>
+          </ul>
+          <li>Software       Objectives</li>
+          <ul type="square">
+            <li>Software        Objectives is the next stage is figuring out the customer's general        goals. Even though only spelled out in Spiral, it is required for all        methodologies.</li>
+          </ul>
+          <li>Risk</li>
+          <ul type="square">
+            <li>Risk        is a common practice throughout all methodologies, but specifically to        Spiral. All mature software projects are constantly identifying risks to        mitigate issues and problems.</li>
+          </ul>
+        </ul>
+        <li>Requirements</li>
+        <ul type="circle">
+          <li>System       Requirements</li>
+          <ul type="square">
+            <li>System        Requirements are a high-level list of requirements that usually identify        hardware, operating system, communication, and architecture        specifications. Specifically mentioned in the Waterfall, System        Requirements are needed in all aspects of the Software Development        Lifecycle. </li>
+          </ul>
+          <li>Software       Requirements</li>
+          <ul type="square">
+            <li>Software        Requirements are specifications specific to the developed software.        These requirements interact with the system requirements and identify        all the functionality of the developed software. Waterfall and Spiral        specifically call these out.</li>
+          </ul>
+          <li>Architecture</li>
+          <ul type="square">
+            <li>The        Architecture phase is the part of the System Requirements and is used to        define better what resources the software will run on. Found primarily        on V-Model explanations.</li>
+          </ul>
+          <li>Requirements       Validation</li>
+          <ul type="square">
+            <li>Requirements        Validation lays out the preliminary research for testing the System and        Software Requirements. It is necessary to try each requirement, known as        verification. And that the requirements reflect what the customer wants,        known as validation. Typically, this is done through a Software        Requirements Review (SRR) meeting and is a significant milestone in the        Software Lifecycle. This phase in the Spiral Methodology is precisely        defined.</li>
+          </ul>
+        </ul>
+        <li>Design</li>
+        <ul type="circle">
+          <li>Analysis</li>
+          <ul type="square">
+            <li>The        analysis usually starts during the requirements phase and is finished        during the development phase. It takes the requirements and begins the        transformation process, breaking them down when programmers can begin        implementing them in code. This process also addresses product,        customer, data, and process workflows.</li>
+          </ul>
+          <li>Program       Design</li>
+          <ul type="square">
+            <li>The        Program Design is a process of taking the requirements and coming up        with solutions to implement them in code. Program Design, also called        Product Design or Detailed Design, is introduced in Waterfall and        further defined and explained in Spiral and V-Model methodologies. </li>
+          </ul>
+          <li>Prototyping</li>
+          <ul type="square">
+            <li>Prototyping        is a technique of creating representatives of the software functionality        to show to the customer. Spiral Methodology heavily relies on the method        used in Demonstrations during Agile. Prototypes do not typically work,        and care should be taken to prevent customers from thinking it is the        current working product.</li>
+          </ul>
+          <li>Product       Validation and Verification</li>
+          <ul type="square">
+            <li>As        part of the design phase's last step, culminating in a Software Design        Review meeting (Waterfall &amp; Spiral), the team makes sure that the        customer wants and the design fulfills requirements.</li>
+          </ul>
+        </ul>
+        <li>Implementation</li>
+        <ul type="circle">
+          <li>Coding/Implementation</li>
+          <ul type="square">
+            <li>Coding        and Implementation are where the tires meet the road. It tests if the        Requirements and Design are detailed enough to translate the customer's        needs down to executable binary code. Found in all methodologies, it is        the most critical lifecycle phase.</li>
+          </ul>
+          <li>Build</li>
+          <ul type="square">
+            <li>The        Build phase is more complicated than just compiling the code. It        involves making sure that it works with other parts of the System,        Architecture, and Design. It correctly links all the pieces together        into a simplified process. With the recent development of Continuous        Integration and Delivery, this phase has come into its own. </li>
+          </ul>
+        </ul>
+        <li>Testing</li>
+        <ul type="circle">
+          <li>Unit       Testing</li>
+          <ul type="square">
+            <li>Unit        Tests are typically written (before or) during (or after) the coding and        implementation phase. Its primary focus is on Black Box testing each small        coded component to verify that they work correctly.</li>
+          </ul>
+          <li>Simulations/Simulators</li>
+          <ul type="square">
+            <li>Much        like prototyping, simulator and simulations provide a way to verify that        the system, architecture, and software work correctly. Specifically        spelled out in Spiral, simulators help when the hardware is unavailable.        Simulations model the system to provide performance benchmarks and are a        valid testing method known as Testing by Analysis.</li>
+          </ul>
+          <li>Integration       Testing</li>
+          <ul type="square">
+            <li>As        part of verifying the build phase, Integration Testing makes sure that        interfaces between minor and major components are working together. That        software properly talks to the architecture, and the system runs as        designed.</li>
+          </ul>
+          <li>System       Testing</li>
+          <ul type="square">
+            <li>Found        in Waterfall and V-Model methodologies, System Testing is a set of tests        to ensure that the identified workflows are working as expected.</li>
+          </ul>
+          <li>Acceptance       Testing</li>
+          <ul type="square">
+            <li>Spiral        and XP methodologies focus on Acceptance testing to verify and validate        the originals customer's needs. Typically, a meeting, SAT        (Software/System Acceptance Test), is done with the customer just before        deployment. Walkthrough and demonstration tests address each of the        customers' needs and concerns.</li>
+          </ul>
+        </ul>
+        <li>Operation      and Maintenance</li>
+        <ul type="circle">
+          <li>Deployment       and Version Release</li>
+          <ul type="square">
+            <li>After        acceptance with the customer, the customer received the software. The        software package includes hardware (if needed), software packages for        support, and scripts and programs to configure and set up the software.        This phase addresses concerns of releases and DevOps. The XP methodology        specifically requires a Release plan, and Agile addresses Deployment        procedures.</li>
+          </ul>
+          <li>Operation       and Monitoring </li>
+          <ul type="square">
+            <li>The        customer and user are using this stage of the software. Bugs are being        found, and information and data are being sent back for analysis and        fixes. </li>
+          </ul>
+        </ul>
+      </ul>
+      <h2>Find Sources</h2>
+      <p>Once you and your partner(s) have selected a software development methodology, the next step is to find sources that describe it. There is a single paper written by the methodology author in some cases. You will certainly want to get that source if this is the case. In other cases, some works explain specific parts of the methodology. These can be very valuable. In other cases, some papers criticize or correct the process. Certainly, look for articles such as these.<br>
+        You and your partner should have three to five sources when you are finished. Three might be sufficient if each of your citations is very detailed. You may need up to five if one or more of your sources do not cover the software methodology completely. You know you have enough when each fact is present in at least two sources.<br>
+        Sources should be &quot;high quality.&quot; This means that sources have known authorship (not Wikipedia) and the authors are experts. For example, if a source was published by a company (such as IBM), its reputation is behind the source so that it can be trusted. If the source was published in a journal, then the journal verifies that the author is a known expert. Finally, if the author is an expert in the field (this may require some investigation to verify this), the source can be trusted.</p>
+      <h2>Make Notes</h2>
+      <p>Carefully read each of your sources. Make special note of the following:</p>
+      <ul type="disc">
+        <li>What      are the checkpoints/milestones/phases of a project? (does the checkpoint      have a name, how long is it, how do you know you reached it?)</li>
+        <li>What      meetings need to take place? (who is required to attend, what will be the      agenda, what you expect to be accomplished, how often or at what event      will the meeting be called?)</li>
+        <li>What      roles do people play? (what is the role&rsquo;s name, what are the      qualifications, what responsibilities are associated with the roles, who      will be assigned to each role?)</li>
+        <li>What      artifacts (documents, deliverables, products) are produced during the      project? (who will author the document, who will read the document, what      purpose does the document serve, is there a deadline?)</li>
+        <li>How is      information communicated (such as status information, assignments,      reports, etc.)?</li>
+        <li>How is      testing performed?</li>
+      </ul>
+      <p>As you answer each of these questions, write them down in a notes document. A note document is just a document where you jot down quotes, statistics, references, and facts that may come in handy for future use. This document will be submitted for a grade.<br>
+        We will use this document for the end-of-week report. Pay special attention to the responsibilities of the tester in your methodology. Namely, their roles, the meetings they attend, documents they read and write, etc.<br>
+        Only one document will be submitted for each partnership. This is a notes document, so it does not need to be professional. Feel free to dump information in a document and submit it. You will only be graded on the content, not on the presentation. Please submit a single PDF.</p>
+<h2>Assessment</h2>
+      <p>Your submission will be evaluated according to the following rubric:</p>
+      <table class="rubric">
+        <tbody>
+          <tr>
+            <th>&nbsp;</th>
+            <th>Exceptional<br/>100%</th>
+            <th>Good<br/>90%</th>
+            <th>Acceptable<br/>70%</th>
+            <th>Developing<br/>50%</th>
+            <th>Missing<br/>0%</th>
+          </tr>
+          <tr>
+            <th>Sources<br/>30%</th>
+<!-- 100 --><td>The combination of the sources paints a complete picture of the methodology</td>
+<!-- 90  --><td>The sources are all of high quality</td>
+<!-- 70  --><td>One or two sources are poor quality</td>
+<!-- 50  --><td>At lest one source is present</td>
+<!-- 0   --><td>The notes page contains no evidence of sources</td>
+          </tr>
+   
+          <tr>
+            <th>Detail<br/>50%</th>
+<!-- 100 --><td>Every aspect of the methodology is described in the notes</td>
+<!-- 90  --><td>All the important facts are listed</td>
+<!-- 70  --><td>One or two minor items are inadequately described</td>
+<!-- 50  --><td>Some aspects of the methodology are described</td>
+<!-- 0   --><td>There is insufficient information to attempt the report at the end of the week</td>
+          </tr>
+          <tr>
+            <th>Citations<br/>20%</th>
+<!-- 100 --><td>Everything is fully cited and all the citations are from high-quality sources</td>
+<!-- 90  --><td>Everything is fully cited</td>
+<!-- 70  --><td>There exists a few missing citations or some citations are of insufficient quality</td>
+<!-- 50  --><td>There are a few citations </td>
+<!-- 0   --><td>No citations</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </body>
+</html>

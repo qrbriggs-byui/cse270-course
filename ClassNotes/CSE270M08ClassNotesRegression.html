@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../site/style.css" />
+    <title>CSE 270 Class Notes M08: Regression Testing</title>
+</head>
+
+<body>
+<header id="courseTitle">
+        <span class="icon-byui-logo"></span>
+        <h1>CSE 270: Class Notes M08: Regression Testing</h1>
+</header>
+
+	
+<article>
+  <h1>Notes for Classroom</h1>
+  <h2>Overview</h2>
+  <p>Most testing will fall into different stages of software lifecycles. This week is a follow on of Week 03 &amp; 04. We will explore which types of tests (04) will be completed in which phase of the lifecycle (03). </p>
+  <ul>
+    <li>Students must understand that each level of testing effects the next level of testing, and changes in one can cause issues up the chain.</li>
+    <li>Students will explore the responsibilities of a Tester in each phase of the software lifecycle. Responsibilities are not entirely located at the end of the DevOps portion of the lifecycle.</li>
+  </ul>
+  <p>This week we are expanding from Test Case, that deals with Unit level, to the System and Integration level of the Software Development lifecycle phases. The focus is on Regression Tests. There is not enough time to test every possible variable, code path, and way a user could use  a complex software system. A Regression Test is a small subset of all the possible tests. They say, "make it idiot proof and there is always a smarter idiot." A regression tests is more than the happy path (options that don&rsquo;t produce any errors), it also tests performance, robustness, and fault-tolerance. Regression tests are mainly used in Software Maintenance and in the Regression, tests is derived from the Acceptance Tests or Coverage Tests. From the 1st Iteration, a regression plan should be in place to prevent error creeping in to the baseline, this holds true for from Spiral to Test Driven Development to Agile methodologies.</p>
+  <h2>Objectives</h2>
+  <p>By the end of the week, each student will be able to: </p>
+  <ul>
+    <li>Differentiate Testing Level (Unit, Integration,  Regression, System) </li>
+    <li>Develop a Regression Plan</li>
+  </ul>
+  <h2>Before the Week Begins (Prepare)</h2>
+  <p>Instructor Resources</p>
+  <p>Preparation: </p>
+  <ul>
+    <li><a href="https://learning.oreilly.com/library/view/software-testing-second/0672327988/">Software Testing, Second Edition</a> by  Ron Patton Published by <a href="https://learning.oreilly.com/library/publisher/sams/">Sams</a>, 2005</li>
+    <li>
+      <ul>
+        <li><a href="https://learning.oreilly.com/library/view/software-testing-second/0672327988/">https://learning.oreilly.com/library/view/software-testing-second/0672327988/</a></li>
+        <li>Chapter 3: The Realities of Software Testing</li>
+        <li>Chapter 19: Test-Driven Development</li>
+        <li>Chapter 15: Automated Testing and Test tools </li>
+      </ul>
+    </li>
+    <li>Fundamentals of Software Testing by Bernard Homès, and Bernard Homes, Publisher John Wiley &amp; Sons, Incorporated Date   2012-01-17</li>
+    <li>
+      <ul>
+        <li><a href="https://ebookcentral.proquest.com/lib/byui/reader.action?docID=1120766&ppg=75">https://ebookcentral.proquest.com/lib/byui/reader.action?docID=1120766&amp;ppg=75</a></li>
+        <li>Chapter 4.4 Structure-based techniques</li>
+      </ul>
+    </li>
+    <li>Have Selenium Installed with Python </li>
+    <li>Understand how Tiddlywiki works and access tags within the framework</li>
+  </ul>
+  <p>Partnership/Group work:</p>
+  <ul>
+    <li>Student will be working in groups to create automated tests using TiddlyWiki <a href="../Labs/DrMobil.html">Dr. Mobile</a> application.</li>
+  </ul>
+  <h2>Announcement</h2>
+  <p>Week to Week 08<br>
+We are officially halfway through the semester. Great job so  far.<br>
+What is regression testing?<br>
+Regression testing is the compilation of Unit, Integration,  System, and Acceptance testing. As mentioned Regression test is a small subset  of all of these tests. The regression test&rsquo;s purpose is to make sure all the program&rsquo;s  vital elements are working as the project starts to integrate the parts; this  includes workflows established by the customer. The regression test changes as  the program grow and changes. <br>
+The first version of a project&rsquo;s regression test starts with  the first two Unit Tests. As more Unit Tests are developed, the Regression Test  is optimized to test the project&rsquo;s previous and newly developed features. <br>
+For large projects, it is impossible to test every variation  of the System, so vital or happy path tests are written to verify new  functionality does not change the design. <br>
+After Unit Tests, Regression tests start to include Integration  tests and System (or End to End tests). After delivery, Regression is again  updated, this time with some Acceptance tests.<br>
+<strong>Regression Lab</strong><br>
+Workflows are an essential part of creating Regression  Tests. A workflow is a process that the user needs to do to complete a task.  The Lab presents seven different workflows: Search, Patient Id, Diagnose,  Treat, Monitor, Transport, and Ordering. You will create a backstory for your  regression test by identifying the workflow and identifying features in your  backstory workflow. The first one, Avalance, is laid out for you. It identifies  the workflows&rsquo; order and asks you questions about Dr. Mobile&rsquo;s features to  answer.<br>
+Please make sure you reply to a classmate&rsquo;s situation by  identifying a part of their scenario that could be missed or potentially fail.  Also, identify what other situation (Hurricane, Earthquake, etc.) could there  tests be used, with one or two changes. <br>
+<strong>Regression Test: Create automated tests</strong><br>
+It is required that you have Selenium install and working in  your MS VS Code IDE. <br>
+TiddlyWikiHTMLStructure.ppt (<a href="https://byui-cse.github.io/cse270-course/Labs/TiddlyWikiHTMLStructure.pptx">https://byui-cse.github.io/cse270-course/Labs/TiddlyWikiHTMLStructure.pptx</a> )<br>
+The Dr. Mobile simulator uses an HTML page called a  Tiddlewiki. You will need to know a bit about the program to create tests. </p>
+  <ul>
+    <li>Slide 1: You will need to use the HTML Inspector  from your browser. An HTML page is divided into two units: Head and Body. The  Head of a Tiddlewiki page contains metadata and is not useful for our tests. The  Body hold the majority of the the Tiddlywiki, and consists of a series of div  sections. The tc-body has a container (tc-page-container), that holds all the  stuff you see on the left of the Tiddlywiki page. The container holds the  storyriver (tc-story-river) of tiddlers (tc-tidder-frame). The tiddlers are the  content of the Tiddlywiki.  </li>
+    <li>Slide 3: Overview of Dr. Mobiles&rsquo; communication  channels.</li>
+    <li>Slide 4: Overview of Dr. Mobiles sensors and emitters</li>
+    <li>Slide 5: Workflow and corresponding tiddlers  names</li>
+    <li>Slide 6: Dr. Mobile display layers. The Dr.  Mobile simulation contains several different layers. When a user logins in it  displays DrMobileHome tiddler. The DrMobileHome tiddler then displays different  actions, such as _H_, Patients, Communicate, and Settings. Each of them has its  display layer. </li>
+    <li>Slides 7 on, please ignore for now. </li>
+  </ul>
+  <p><strong>Coding Automated Tests</strong><br>
+    The attached code is to help you with creating automated  tests.<br>
+  <a href="https://byui-cse.github.io/cse270-course/Labs/CSE270M08TeachLabDrMobilSeleniumCode.py">https://byui-cse.github.io/cse270-course/Labs/CSE270M08TeachLabDrMobilSeleniumCode.py</a> <br>
+    You need to create a new project and python file. Copy the  code into the new python file. In the class:LoadBrowser:setup function, change  to your preferred brower&rsquo;s webdriver. <br>
+    The code is made to simplify your coding experience. For  each test you created, you create a python list with dictionary values.</p>
+  <ul>
+    <li>&ldquo;name&rdquo;:               The  first key-value set is the step name. The key is the name, and the value is  what you what to call the step.</li>
+    <li>&ldquo;test_element&rdquo;:               The  values for this are &ldquo;step,&rdquo; &ldquo;results,&rdquo; or &ldquo;validate,&rdquo; many lists the tests you  wrote last week.</li>
+    <li>&ldquo;variable&rdquo;:           The  value is the name of the variable that you would like to store the results of  the step. The variable name is used as an input in any other commands. The  first variable is &ldquo;frame&rdquo; and contains the HTML from the tc-tiddler-frame or  story river. Each time a command is run, the results are put into a python  dictionary. The variable name is the key and the results as the value, so be  careful to identify the variable names uniquely. </li>
+    <li>&ldquo;command&rdquo;:       This  name of the command that you use to execute the step.</li>
+    <ul>
+      <li>Step commands:              </li>
+      <ul>
+        <li>attribute:             get  an attribute of html tiddlewiki div tag</li>
+        <li>className:         gets  the corresponding html (parameter) contents that has that class name, and puts  the results in &ldquo;variable: name&rdquo;</li>
+        <li>tagName:            get  the HTML tag (parameter) contents and puts the results in &ldquo;variable:name&rdquo;</li>
+        <li>click_single:        sends  a click command to a button</li>
+        <li>click:                      represents  a link being clicked</li>
+        <li>send_keys:         puts  in parameter value in a text box</li>
+      </ul>
+      <li>Results command:           </li>
+      <ul>
+        <li>equal:                   will  compare the parameter to the input values</li>
+        <li>exists                    will  determine if the input value has information.</li>
+      </ul>
+      <li>Verify commands:           </li>
+      <ul>
+        <li>equal:                   will  compare the parameter to the input values</li>
+        <li>exists                    will  determine if the input value has information.</li>
+      </ul>
+      <li>Debug commands:</li>
+      <ul>
+        <li>text:                      puts  the input variable contents as a string, removing all of the HTML tags. </li>
+      </ul>
+    </ul>
+    <li>&ldquo;parameter&rdquo;: </li>
+    <ul>
+      <li>Each command can take a parameter to compare to  the input. </li>
+    </ul>
+    <li>&ldquo;input&rdquo;: </li>
+    <ul>
+      <li>The input corresponds to the &ldquo;variable&rdquo;. The  first input of every test should query the &ldquo;frame&rdquo; variable. </li>
+    </ul>
+  </ul>
+  <p>There are two tests already set up for you. One tests the  Login dialog, and the other verifies that the Home (_H_) layer is visible. <br>
+    You will need to create four other test cases.<br>
+    Turn in the modified python code and a text file with the  output from the webdriver (copy and paste). </p>
+<h2>During the Week (Teach)</h2>
+  <p>Classroom  Day 1:</p>
+  <ul>
+    <li>Discuss which Testing Techniques are used at the Different levels (Week 4) </li>
+    <li>Discuss the differences between happy path testing, and exception cases</li>
+  </ul>
+  <p>Classroom  Day 2 &amp; 3:  </p>
+  <p>Group: Create a series of automated tests</p>
+  <p>Labs:</p>
+  <ul>
+    <li> Dr Mobile is to help Emergency Medical Personal with rescue   and aid in times of disaster. There is a general workflow that any medical personal does to complete their task to stabilize a person. </li>
+    <li>Student will be working on the workflow used by an EMP, to create automated tests.</li>
+  </ul>
+  <h2>Post Mortem: </h2>
+  <p>After each class answer the following questions: </p>
+  <ul>
+    <li>Key Analysis
+      <ul>
+        <li>What key components when well during the class? What didn't? </li>
+      </ul>
+    </li>
+    <li>Class Synthesis
+      <ul>
+        <li>What questions did the students ask?</li>
+      </ul>
+    </li>
+    <li>Start (New, Innovation):</li>
+    <li>
+      <ul>
+        <li>Tips
+          <ul>
+            <li>If you did something differently what would it be?</li>
+          </ul>
+        </li>
+        <li>Aha&rsquo;s
+          <ul>
+            <li>What new ideas did you discover?</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Stop (What didn&rsquo;t work):</li>
+    <li>
+      <ul>
+        <li>Traps </li>
+        <li>What would not be a good idea to do again?</li>
+      </ul>
+    </li>
+    <li>Continue (What worked):
+      <ul>
+        <li>Why did the activities work well? Was it the students, the teacher (presenter), the content, or activity?</li>
+      </ul>
+    </li>
+    <li>Humor
+      <ul>
+        <li>What was funny about the module? Some you said, students said, etc. that made the class more enjoyable?</li>
+      </ul>
+    </li>
+  </ul>
+  <p>&nbsp; </p>
+</article>
+
+</body>
+</html>

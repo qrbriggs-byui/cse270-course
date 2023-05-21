@@ -1,0 +1,139 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../site/style.css" />
+    <title>CSE 270: W08 Plan: Regression Testing</title>
+  </head>
+  <body>
+    <header id="courseTitle">
+      <span class="icon-byui-logo"></span>
+      <h1>CSE 270: W08 Plan: Regression Testing</h1>
+    </header>
+    <article>
+
+      <p>Create a regression test plan.
+        This is to be done in two steps:
+        First, identify a code change that can be made in the code-base.
+        Second, create a set of test cases which will verify the change.</p>
+
+      <h2>Identify a Code Change</h2>
+      <p>With your partner(s), identify a code change that can be made in the code-base previously selected.
+        This change should not alter the functionality of the project, but rather modify an implementation detail.
+        In other words, the functionality of the code should not change.
+        The following are examples of code changes:</p>
+      <ul>
+        <li><strong>Encapsulate</strong>:
+          Take a data structure that was created with built-in data types
+          and turn it into a class.
+          For example, turn a Sudoku board created from a 9x9 array of integers
+          into a <code>Board</code> class.</li>
+        <li><strong>File Format</strong>:
+          Adjust the file format from one format to another.
+          For example, consider a Sudoku file format that consisted of 81 numbers.
+          Turn this file format into JSON.</li>
+        <li><strong>Algorithm</strong>.
+          Oftentimes, more than one algorithm produces the same result.
+          When this is the case, swap out one algorithm for another.
+          For example, swap a bubble sort for an insertion sort,
+          or a linear search for a binary search.</li>
+      </ul>
+      <p>
+        Regression testing can be performed on code changes of any size.
+        This includes major changes like swapping out data base technology in an enterprise application,
+        to minor changes such as renaming a variable.
+        For the purpose of this lab, our code change must be somewhere in between.
+        The code change must be about one or two dozen lines of code.
+      </p>
+      <p>
+        Note that if your code change is not expected to alter functionality but it does
+        due to an unforeseen implementation detail,
+        then your regression testing should catch that change.
+        In other words, it is OK if the regression test fails
+        because it caught a real bug you unintentionally introduced.
+      </p>
+  
+      <h2>Create a Regression Test Plan</h2>
+      <p>Now that you have identified the code change that you are going to make,
+        create a plan for how you will validate that the change did not impact functionality.
+        To do this, you are going to generate an "appropriate" number of test cases to fully cover the change.</p>
+      <p>Remember you are not testing the code change, but everything around the code change. You are testing that the change in the code did not effect the rest of code. For example, if you were testing a change in a web page, you would write tests that about the webpage before the change. You would then get the newer version and run the same tests again to make sure the change didn't cause any effects or did cause effects. </p>
+      <p>Exactly how many test cases will be required?
+        This depends on the complexity of your change.
+        For example, if your code change was in how a tic-tac-toe board is stored in memory,
+        then you will have to verify the file-save code, the display code, and the board edit code.
+        Each of these three points will probably require a half dozen test cases.</p>
+      <p>Don't worry if you think that the change will cause any one of the tests to fail. That is the purpose of the regression test to identify the changes. In the report, in the next assignment, you identify the issue and on a development project you submit the report back to the programmers to fix. </p>
+      <p>Each test cases should be comparable in detail to what we produced last week.</p>
+
+      <h2>Submission</h2>
+      <p>Your team will submit a single document for your test cases.
+        The document needs to be in the PDF format.
+        It must consist of the following components:</p>
+      <ol>
+        <li><strong>Project</strong>:
+          Provide a two or three sentence description of the project in which the code change will be made.</li>
+        <li><strong>Code Change</strong>:
+          Describe in detail the code that will be changed.
+          This includes the actual code that will be change 
+          (just the fragment that will require a change, not the entire program),
+          and a description of what the code will look like after the change.</li>
+        <li><strong>Test Cases</strong>:
+          All the test cases that will be used to verify the change.</li>
+      </ol>
+
+      <h2>Assessment</h2>
+      <p>Your submission will be evaluated according to the following rubric:</p>
+      <table class="rubric">
+        <tbody>
+          <tr>
+            <th>&nbsp;</th>
+            <th>Exceptional<br/>100%</th>
+            <th>Good<br/>90%</th>
+            <th>Acceptable<br/>70%</th>
+            <th>Developing<br/>50%</th>
+            <th>Missing<br/>0%</th>
+          </tr>
+          <tr>
+            <th>Code-base Selection<br/>10%</th>
+<!-- 100 --><td>The code base selection is an excellent choice</td>
+<!-- 90  --><td>The code base is of an appropriate level of complexity</td>
+<!-- 70  --><td>It is possible to complete this lab with this code-base, but it will be more difficult than necessary</td>
+<!-- 50  --><td>The code base is not appropriate for this lab</td>
+<!-- 0   --><td>No code base was described</td>
+          </tr>
+          <tr>
+            <th>Code Change<br/>20%</th>
+<!-- 100 --><td>It is easy to see how this code change can be made and tested</td>
+<!-- 90  --><td>All the required information is present to visualize the proposed code change</td>
+<!-- 70  --><td>The code change is too simplistic or too complex to be reasonably verified</td>
+<!-- 50  --><td>The proposed code change will not be appropriate for this lab</td>
+<!-- 0   --><td>The code change was not described</td>
+          </tr>
+          <tr>
+            <th>Test Cases<br/>60%</th>
+<!-- 100 --><td>There is no room for improvement in the test cases</td>
+<!-- 90  --><td>Each test case is well-defined and will completely cover the change</td>
+<!-- 70  --><td>A few minor errors or missing information exists</td>
+<!-- 50  --><td>Insufficient detail or insufficient test coverage</td>
+<!-- 0   --><td>No test cases are present</td>
+          </tr>
+          <tr>
+            <th>Professionalism<br/>10%</th>
+<!-- 100 --><td>The report is professional, easy to read, and all the ideas are clearly communicated</td>
+<!-- 90  --><td>The writing style is "professional:" there are no grammar, spelling, or formatting errors</td>
+<!-- 70  --><td>There exists an instance of a spelling error, grammar error, 
+              overly verbose wording, poor formatting, or poor writing</td>
+<!-- 50  --><td>Multiple spelling, grammatical, formatting, or writing errors</td>
+<!-- 0   --><td>Gross spelling/grammar errors or other aspects of the writing 
+              that make the report difficult to read</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </body>
+</html>
+

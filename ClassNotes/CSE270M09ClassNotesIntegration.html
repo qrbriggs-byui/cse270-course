@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../site/style.css" />
+    <title>CSE 270 Classroom Notes M09: Regression Testing</title>
+</head>
+
+<body>
+<header id="courseTitle">
+        <span class="icon-byui-logo"></span>
+        <h1>CSE 270: Classroom Notes M09: Regression Testing</h1>
+</header>
+
+	
+<article>
+  <h1>Notes for Classroom</h1>
+  <h2>Overview</h2>
+  <p>As software is being developed, many times it is divided into different pieces, top-down design, and worked independently. As some point the piece need to come back together. When all the pieces come together, the problems really begin to pile up. Much like making bread, you can&rsquo;t put all the ingredients in the mixer at the same time and expect perfect bread. Assembly of software is a key component to delivering on time. Understanding how to describe the inputs getting processed to output throughout the entire workflow is a vital skill in delivery the desired product. In addition to making sure that product is comes together, there is also making sure it works with other 3rd party components, interfaces, and standards.</p>
+  <ul>
+    <li>Students will understand the risks of Integration Testing</li>
+    <li>Students explore the different parts of a system (End to End)</li>
+    <li>Students will organize and create an Integration Plan and then test it using QA Checklist</li>
+  </ul>
+  <h2>Objectives</h2>
+  <p>By the end of the week, each student will be able to: </p>
+  <ul>
+    <li>Implement Testing Applications (Cyber, UX,  Full-Stack, End-To-End)</li>
+    <li>Build an Integration Plan</li>
+  </ul>
+  <h2>Before the Week Begins (Prepare)</h2>
+  <p>Instructor Resources</p>
+  <p>Preparation: </p>
+  <ul>
+    <li>Software Testing, Second Edition by Ron Patton Published by Sams, 2005</li>
+    <ul>
+      <li><a href="https://learning.oreilly.com/library/view/software-testing-second/0672327988/">https://learning.oreilly.com/library/view/software-testing-second/0672327988/</a></li>
+      <li>Chapter 5 Testing the Software with Blinder On</li>
+    </ul>
+    <li><a href="https://learning.oreilly.com/library/view/software-testing-4th/9781466560680/">Software Testing, 4th Edition</a> by Paul C. Jorgensen Published by <a href="https://learning.oreilly.com/library/publisher/auerbach-publications/">Auerbach Publications</a>, 2013</li>
+    <ul>
+      <li><a href="https://learning.oreilly.com/library/view/software-testing-4th/9781466560680/">https://learning.oreilly.com/library/view/software-testing-4th/9781466560680/</a></li>
+      <li>Chapter 13: Integration Testing.</li>
+    </ul>
+    <li>Fundamentals of Software Testing by Bernard Homès, and Bernard Homes, Publisher John Wiley &amp; Sons, Incorporated Date 2012-01-17</li>
+    <ul>
+      <li><a href="https://ebookcentral.proquest.com/lib/byui/reader.action?docID=1120766&ppg=75">https://ebookcentral.proquest.com/lib/byui/reader.action?docID=1120766&amp;ppg=75</a></li>
+      <li>Chapter 8: Templates and Models</li></ul>
+  </ul>
+  <p>Partnership/Group work:</p>
+  <ul>
+    <li>Divide the class up in to Groups, and have them work on the Integration Test Plan. </li>
+  </ul>
+  <h2>Announcement</h2>
+  <p><strong>Welcome to Week 09: Integration  Testing</strong> <br>
+This week you will be learning about  Integration Tests.<br>
+There are essentially four different  types of tests.</p>
+  <ul type="disc">
+    <li>Unit Tests check the implementation for errors at each       unit of work. As each unit is finished it is added to the whole.</li>
+    <li>Integration Tests grow as the units are finished. If       not organized correctly, this can be a nightmare quickly. Usually, a plan       is needed to keep them straight.</li>
+    <li>System Tests are end-to-end tests and verify that the       entire system has been fully integrated. In larger projects, an extension       of system tests is Acceptance Tests are tests. Acceptance tests show to       the customer that the system validates their needs.</li>
+    <li>Regression Test is a series of happy path tests. Each       time Units are added or changed the system needs to be tested to verify       most of the system still works, and the change or new capability has not       introduced new bugs.</li>
+  </ul>
+  <p>Image, for a moment you own a car if  you do not already have one. The Unit Tests are the individual parts of the car.  For example, tires go through a thorough examination before they are installed.  An Integration Test is the test drive and performance tests on the track after  the car is assembled. The System or Acceptance test the customer test driving  the car at the car dealer. The Regression test is the 14-to-30-point inspection  that the car mechanic does when you bring it in for service.<br>
+    This week you will be developing an  Integration Plan.&nbsp; This is like a report and not a set of tests. Since we  are working with a small application, the plan is essentially an outline to  keep track of the progress of integrating the units and testing them.<br>
+    Please follow the updated outline  for the plan. You will be using parts from the previous assignment to assemble  the plan. So, this is equivalent to a midterm.</p>
+<h2>During the Week (Teach)</h2>
+  <p>Classroom Day 1:</p>
+  <ul>
+    <li>Discuss which Testing Techniques are used at the Different levels (Week 4)</li>
+  </ul>
+  <p>Classroom Day 2:</p>
+  <ul>
+    <li>Discuss on Full-Stack and End-to-End processing</li>
+    <ul>
+      <li>Multi-language (Functional, OO, Procedural), (Compile, Scripting, blend)</li>
+      <li>Throwing  everything together at the end is a huge risk, and integration testing is the  mitigation</li>
+      <li>Understanding how different parts of a system play together (Full  stack), Front-end (UX), Middleware, and Backend (DB) or End to End</li>
+    </ul>
+  </ul>
+  <p>Classroom Day 3:</p>
+  <ul>
+    <li>Group Work: Create an Integration Plan</li>
+    <ul>
+      <li>Identify interfaces between project components, architecture components, 3rd  party software, and legacy code.</li>
+      <li>Create a schedule or dependency chart of components</li>
+      <li>Identify Quality Characteristics (Week 5) that need to be tested along with verifying requirements. Design elements that are done at this level (Week 7).</li>
+      <li>Identify Stub Elements, Simulators, and Performance elements</li>
+      <li>Identify which Unit Tests need to be used and which don&rsquo;t (Week 7)</li>
+      <li>Identify which Tools are to be used (Week 6)</li>
+      <li>Create a checklist list (Week 3)</li>
+    </ul>
+  </ul>
+  <p>Labs:</p>
+  <ul>
+    <li>Lab: TODO</li>
+  </ul>
+  <h2>Post Mortem: </h2>
+  <p>After each class answer the following questions: </p>
+  <ul>
+    <li>Key Analysis
+      <ul>
+        <li>What key components when well during the class? What didn't? </li>
+      </ul>
+    </li>
+    <li>Class Synthesis
+      <ul>
+        <li>What questions did the students ask?</li>
+      </ul>
+    </li>
+    <li>Start (New, Innovation):</li>
+    <ul>
+      <li>Tips
+        <ul>
+          <li>If you did something differently what would it be?</li>
+        </ul>
+      </li>
+      <li>Aha&rsquo;s
+        <ul>
+          <li>What new ideas did you discover?</li>
+        </ul>
+      </li>
+    </ul>
+    <li>Stop (What didn&rsquo;t work):</li>
+    <ul>
+      <li>Traps </li>
+      <li>What would not be a good idea to do again?</li>
+    </ul>
+    <li>Continue (What worked):
+      <ul>
+        <li>Why did the activities work well? Was it the students, the teacher (presenter), the content, or activity?</li>
+      </ul>
+    </li>
+    <li>Humor
+      <ul>
+        <li>What was funny about the module? Some you said, students said, etc. that made the class more enjoyable?</li>
+      </ul>
+    </li>
+  </ul>
+  <p>&nbsp; </p>
+</article>
+
+</body>
+</html>

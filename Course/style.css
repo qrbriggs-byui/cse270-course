@@ -1,0 +1,73 @@
+/******************************
+ * CSE 270
+ ******************************/
+ 
+
+
+/********************************
+ * RUBRICS
+ ********************************/
+
+/* Overall table */
+table.rubric {
+  width: 100%;
+  margin: 0px auto;
+  border-collapse: collapse;
+  border-top: 2px solid rgb(0, 62, 96);
+  color: black;
+  text-align: left;
+}
+
+/* Header Row */
+table.rubric tr:first-child th {
+  color: white;
+  background-color: rgb(0, 46, 71);
+  font-size: 14px;
+  border-bottom: 2px solid rgb(0, 62, 96);
+  padding: 6px;
+}
+
+/* Header Column */
+table.rubric th {
+  color: rgb(230, 230, 230);
+  background-color: rgb(0, 59, 91);
+  border-top: 1px solid rgb(0, 62, 96);
+  border-bottom: 1px solid rgb(0, 62, 96);
+  text-align: left;
+  vertical-align: top;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "proxima-nova" !important;
+}
+
+/* Body cells - banded */
+table.rubric tr:nth-child(odd) td {
+  background-color: rgb(230, 230, 230);
+  font-size: 11px;
+  vertical-align: top;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 8px;
+  font-family: 'Verdana', 'Arial', 'Times New Roman';
+
+}
+
+table.rubric tr:nth-child(even) td {
+  background-color: rgb(245, 245, 245);
+  font-size: 11px;
+  vertical-align: top;
+  padding: 8px;
+  font-family: 'Verdana', 'Arial', 'Times New Roman';
+
+}
+
+/* list items */
+table.rubric li {
+  font-family: 'Verdana', 'Arial', 'Times New Roman';
+  margin-top: -5px;
+  margin-bottom: -5px;
+  margin-left: -30px;
+  font-size: 8pt;
+}
+

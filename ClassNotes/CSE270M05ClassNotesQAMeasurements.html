@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../site/style.css" />
+    <title>CSE 270 Classroom Notes M05: Weekly Topic</title>
+</head>
+
+<body>
+<header id="courseTitle">
+        <span class="icon-byui-logo"></span>
+        <h1>CSE 270: Classroom Notes M05: Weekly Topic</h1>
+</header>
+
+	
+<article>
+  <h1>Notes for Classroom</h1>
+  <h2>Overview</h2>
+  <p>Besides the testing of software code, testing is valuable in  producing     quality products, providing maturity of the development process and      determining root causes in error detection. The same principles found in      software testing can be applied elsewhere in software engineering.      Distinguishing between Testing and QA and how they support each other   is   vital  in producing reliable code.  This week is  a preview to QA.  </p>
+  <ul>
+    <li>Students will understand the differences between  QA and Testing </li>
+    <li>Students will understand how both disciplines  help in producing reliable code. </li>
+    <li>Students will understand how to test quality  characteristics</li>
+  </ul>
+  <h2>Objectives</h2>
+  <p>By the end of the week, each student will be able to: </p>
+  <ul>
+    <li>Measure Quality, Maturity, Process Improvement,  Root Cause and Measurement with regards to Testing </li>
+  </ul>
+  <h2>Before the Week Begins (Prepare)</h2>
+  <p>Instructor Resources</p>
+  <p>Preparation: </p>
+  <ul>
+    <li>Reading
+      <ul>
+        <li>J. Miguel et al. "A review of software  quality models     for the evaluation of software products," International  Journal of     Software Engineering &amp; Applications, vol. 5, no. 6, pp. 31-54,  Nov.     2014,  [Online] Available: <a href="http://airccse.org/journal/ijsea/papers/5614ijsea03.pdf">http://airccse.org/journal/ijsea/papers/5614ijsea03.pdf</a></li>
+        <li>M. Paulk et al., "Capability Mature Model    for Software,   Version 1.1," Chapter 1-3 IEEE Software, vol. 10, no.   4, pp.  18-27,   Jul. 1993.  [Online] Available: <a href="http://dx.doi.org.byui.idm.oclc.org/10.1109/52.219617">http://dx.doi.org.byui.idm.oclc.org/10.1109/52.219617</a></li>
+        <li>T. Schorsch, "The Capability Im-Maturity  Model (CIMM)," [Online] Available: <a href="http://www.grisha.ru/cmm/cimm.htm">http://www.grisha.ru/cmm/cimm.htm</a>    </li>
+      </ul>
+    </li>
+  </ul>
+  <p>Partnership/Group work:</p>
+  <ul>
+    <li>No partnership or group work specified, but students can work together and turn in individual assignments. </li>
+  </ul>
+  <h2>Announcements</h2>
+  <p><strong>Welcome to Week 05 Quality Assurance Measurements</strong><br>
+This week you will be focused on the Quality Assurance  portion of Testing. <br>
+Quality Assurance is a separate domain from Testing and  often get confused like IT and CS. Quality Assurance focus on building the  product right, or the process of building the product. Testing focuses on building  the right product or make sure the product works as designed. Part of Quality  Assurance is to make sure Testing is correctly done. <br>
+To test all aspects of the product, QA and Testing using a  Quality Model. A Quality Model consists of various software characteristics  logically arranged in grouping depending on the product&rsquo;s purpose. The Model  helps create the bases for the System and Regression tests and is influenced  and influences the design. The Model is the pre-cursor to a test tree, meaning  that groups and end node characteristics of the Model help derive and organize  the tests. <br>
+As a side note, Quality Assurance is vital to having a  Mature Project. According to Capability Maturity Model or CMM, Quality  Assurance must have processes handle process improvement, defect prevention,  benchmarks, performance collections. The processes collect metrics in both  qualitative and quantitative methods to improve on the software quality characteristics. </p>
+  <p><strong>Lab 05: </strong><br>
+    This week we will focus on taking measurements from mobile  sensors. There are several built-in diagnostic tools in phones, and some you  have to download. I have provided screenshots of help if you find a problem  getting to your phone's diagnostic sensor resources. <br>
+    <strong>Prove 05:</strong><br>
+  This week you will be picking three elements of Dr. Mobile  app. You are going to determine three quality characteristics that you can  measure for each element. You will devise a method of measuring those quality  characteristics. Summarize your information into a 2-3 page plan. </p>
+  <p>&nbsp;</p>
+<h2>During the Week (Teach)</h2>
+  <p>Classroom Day 1:</p>
+  <ul>
+    <li>Discussion of Quality Assurance</li>
+    <li>Discussion of QA Models</li>
+    <li>Discussion of Test Trees    </li>
+    <li>Class Activity: Pick a  product that you use everyday, that has multiple companies that produce it, pick a   Quality Model, and compare three different versions of the  product by   measuring, and evaluating their quality. (Examples: Types of Root beer, Cars, Hamburgers, etc.)</li>
+  </ul>
+  <p>Classroom Day 2:</p>
+  <ul>
+    <li>Discussion of CMM</li>
+    <li>Discussion of Risk Management</li>
+    <li>Discussion of Process Improvement</li>
+    <li>Class Activity: Find a process that doesn&rsquo;t work  in your day to day life.   What CMM level is the process located in, what is being  to done to   improve it.</li>
+  </ul>
+  <p>Classroom Day 3:</p>
+  <ul>
+    <li>Discussion  of Benchmarks, Performance, Measurement   </li>
+    <li>Quality Measurements: Qualitative or Quantitative</li>
+    <li>Class Activity: What can and can't be measured and why
+      <ul>
+        <li>How does one measure Lackard scales? Does a mean(average) or medium work better?</li>
+      </ul>
+    </li>
+  </ul>
+  <p>Labs:</p>
+  <ul>
+    <li>As  part of the development of <a href="../Labs/DrMobil.html">Dr. Mobile</a>, engineers and programmers need to know how  accurate the sensors, both the internal and external sensors, are to determine the noise  to signal ratio in calibrating and detecting change  to raise event update to the software.</li>
+    <li>Students will be measuring sensor data from mobile devices.</li>
+  </ul>
+  <h2>Post Mortem: </h2>
+  <p>After each class answer the following questions: </p>
+  <ul>
+    <li>Key Analysis
+      <ul>
+        <li>What key components when well during the class? What didn't? </li>
+      </ul>
+    </li>
+    <li>Class Synthesis
+      <ul>
+        <li>What questions did the students ask?</li>
+      </ul>
+    </li>
+    <li>Start (New, Innovation):</li>
+    <ul>
+      <li>Tips
+        <ul>
+          <li>If you did something differently what would it be?</li>
+        </ul>
+      </li>
+      <li>Aha&rsquo;s
+        <ul>
+          <li>What new ideas did you discover?</li>
+        </ul>
+      </li>
+    </ul>
+    <li>Stop (What didn&rsquo;t work):</li>
+    <ul>
+      <li>Traps </li>
+      <li>What would not be a good idea to do again?</li>
+    </ul>
+    <li>Continue (What worked):
+      <ul>
+        <li>Why did the activities work well? Was it the students, the teacher (presenter), the content, or activity?</li>
+      </ul>
+    </li>
+    <li>Humor
+      <ul>
+        <li>What was funny about the module? Something you said, students said, etc. that made the class more enjoyable?</li>
+      </ul>
+    </li>
+  </ul>
+  <p>&nbsp; </p>
+</article>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../site/style.css" />
+    <title>CSE 270 Classroom Notes M11: Architecture</title>
+</head>
+
+<body>
+<header id="courseTitle">
+        <span class="icon-byui-logo"></span>
+        <h1>CSE 270: Classroom Notes M11: Architecture</h1>
+</header>
+
+	
+<article>
+  <h1>Notes for Classroom</h1>
+  <h2>Overview</h2>
+  <p>This week is a continuation of understanding end to end  testing by   exploring concept of operations and workflow testing. Different    architectures pose different testing risks. </p>
+  <ul>
+    <li>Students will explore and examine different  architectures (User Experience, Peer2Peer, Multi-Process, Database, Web  Services)</li>
+    <li>Students will analyze testing elements for each  of the architectures</li>
+  </ul>
+  <h2>Objectives</h2>
+  <p>By the end of the week, each student will be able to: </p>
+  <ul>
+    <li>Differentiate testing techniques for different  architectures</li>
+    <li>Devise an End to End test plan   </li>
+    
+  </ul>
+  <h2>Before the Week Begins (Prepare)</h2>
+  <p>Instructor Resources</p>
+  <p>Preparation: </p>
+  <ul>
+    <li>Reading</li>
+  </ul>
+  <p>Partnership/Group work:</p>
+  <ul>
+    <li>Student will be working on Logging and Architecture approach to testing.</li>
+  </ul>
+  <h2>During the Week (Teach)</h2>
+  <p>Classroom Day 1:</p>
+  <ul>
+    <li>Discuss architectures (User Experience,  Peer2Peer, Multi-Process, Database, Web Services)</li>
+    <ul>
+      <li>Front End:  GUIs, mobile, </li>
+      <li>Middleware:  P2P, Client-Server, n-tier, Distributed, Service Oriented, pub/sub, Distributed</li>
+      <li>Backend:  Database (Rational, OO, Non-sql), other Servers</li>
+      <li>Cloud (PaaS,  SaaS, etc): Legacy products
+       
+      </li>
+    </ul>
+  </ul>
+  <p>Classroom Day 2:</p>
+  <ul>
+    <li>Discuss Flows: Data, Process, Work, Control,  Functional Flows</li>
+  </ul>
+  <p>Classroom Day 3:</p>
+  <ul>
+    <li>Discuss Good Coding Practices for Testing and  Debugging, including Logging levels (Error, Warning, User Msgs, Debug Levels,  and Security), bugs in Debugs, Maintenance</li>
+  </ul>
+  <p>Labs:</p>
+  <ul>
+    <li>Lab</li>
+  </ul>
+  <h2>Announcement</h2>
+  <h3>Welcome to Week 11: Architecture</h3>
+  <p>This week we will talk about testing architecture. Yes, some  of you know a little about software architecture, and some know a lot. </p>
+  <h3>Software Architecture:</h3>
+  <p>Most software and system engineers consider the front-end  the user interface or client application. The back-end being considered the database.  The middle-end is the server and sometimes considered the back-end. Altogether,  this is referred to as full-stack development.  With different architectures, the role of the  front and back-end changes a bit.<br>
+    There are several different types of architectures that we  will focus on this week, and there are plenty more. </p>
+  <ul>
+    <li>Peer-to-Peer: This architecture is usually a  direct connection from one device to another, much like a phone call. There is  no going through a central server to transfer information but through a set of  nodes. </li>
+    <li>Wireless: Much like most networks, but the  signal is broadcast, and the node picks up the information and transmits it via  a different medium, i.e., wire/cable. Different forms of wireless include  Bluetooth, wireless internet, etc. </li>
+    <li>Client-Server: Widely used for web services. A  client, the browser, connects to a specific IP-location to a server. The server  provides information back from the client&rsquo;s requests. Examples include beyond the  web, email, most SaaS (Cloud applications), and Movie and File Services. The  client can be dump as a TV or smart as your laptop or another server. A  Client-Server can be event-driven or have a persistent connection. </li>
+    <li>Rule-Base: This service will provide information  based on a set of rules, mostly working with business logic and service-oriented  architectures. These architectures sometimes seem that they have a mind of  their own. The actions are asynchronous and sometimes difficult to debug. The  rules kick off processes base on events, thresholds, and performance. </li>
+    <li>Event-Driven: This architecture is similar to  Rule-based, but usually located on the client-side via HMI (Human Machine  Interface), also known as GUI (Graphical User Interface) or user applications.  The application waits for an event from the user. These are also used on the server-side  to fulfill requests from clients. </li>
+    <li>Database: This is usually considered the other  side of the back-end of the system. Database Management System can be simple as  a text file, to RAIDs, or complex as Oracle. In some instances, the complex  ones handling complex events like an Operating System. </li>
+  </ul>
+  <p>Once these architectures are working with all the  third-party software connected to the project&rsquo;s software, tracking issues  becomes a little more complex. The best practice is to use log files to  determine the workflow of your data. </p>
+  <br clear="all">
+  <h3>Flow Diagrams</h3>
+  <p>A good system design will have data, process, work, control,  and functional flow diagrams.</p>
+  <ul>
+    <li>The data flow diagram identifies all the  processes, the type of data they accept and produce, and the connection where  the data goes afterward. Data flow perspective is a very common and essential  diagram. </li>
+    <li>Process diagrams similar to data flow diagrams  but usually indicate event processing. The process will be used when conditions  are true. </li>
+    <li>Workflow diagrams describe the people&rsquo;s process  of getting a product complete. The workflow then is worked into the business  logic. For example, there is the workflow for checking someone in for an  appointment in the medical field, which includes making sure that they have a  referral, their insurance is good, diagnosing their symptoms, and finding out  about their medical history.</li>
+    <li>Control diagrams describe where the decision-making  point of the system. Usually, these are bottlenecks in the workflow or major  distribution areas.  </li>
+    <li>Functional flow diagrams are detailed  descriptions of what each sub-unit of the program is doing to the product. For  example, what functions are producing the addition of frosting to an automated  cake machine. </li>
+  </ul>
+  <p>Each of these flows allows the engineer to know and look at  the system from different angles, perspectives, and views. Many times  developing user-profiles and use cases help create scenarios through different  views. <br>
+    The trick is to know which part of the system should be  producing data, and what the data looks like at that stage of the system?</p>
+  <h3>Log Files.</h3>
+  <p>Log files are your friend, especially in testing. Most  testing is black-box testing, and you don&rsquo;t have access to the internals of the  program or process in the program. The log files give you that insight. <br>
+    Log files should provide state transitions, data transformation  confirmations, and input and output verifications. A state transition is when  the process is only allowed to accept certain input at that time. For example,  an elevator at the bottom floor will only accept up requests. Or another  example is the application setup wizard will only accept file location for  installation. Data transformation is the process of transforming the input to  the output. The input and output verification log statements show that the  input data is good and acceptable and that the output is right and range. <br>
+    You follow the data through the log files. You follow what  process touched the data using each of the processes log files. You verify that  the completion of the user&rsquo;s workflow by checking the sequence of events found  in the log files. You can determine the state and control decisions made during  the sequence with the log files. And you can determine coverage of the system  or what functional parts of the system processed the data as one variation of  the log files.   <br>
+    Suppose you didn&rsquo;t catch it. The log files verify the flow  diagrams. </p>
+  <strong><br clear="all">
+  </strong>
+  <h3>Logging Systems</h3>
+  <p>Logging Systems have been, for the most part, standardized  and built into coding libraries that integrate with most programming languages.  Each logging system will have different levels of logging. </p>
+  <ul>
+    <li>DEBUG: The finest grain logging level. Usually,  a programmer using this logging statement to output primitive values, entrance  and exiting of functions, and state change.</li>
+    <li>INFO/STATUS: The INFO statements provide information  about the general health of the system. </li>
+    <li>ALERT: The ALERT statements inform the user that  there is an action that is required. </li>
+    <li>WARNING: The system is outside the normal happy  path process and is trying to recover. </li>
+    <li>ERROR: This is when the system has varied from  the happy path, and the system can still recover. </li>
+    <li>CRITICAL: This is when the system has tried a recovery  but was unable at that location, and a reset of the states or program had to be  completed. </li>
+  </ul>
+  <p>This week prove you will determine the best logging  information that you would like to see for each of the use cases. </p>
+  <h3>Prove Assignment</h3>
+  <p>You need to pick 5 out of the seven communication paths, identify  log information type and message to verify each of the four use cases. </p>
+<p>&nbsp;</p>
+  <h2>Post Mortem: </h2>
+  <p>After each class answer the following questions: </p>
+  <ul>
+    <li>Key Analysis
+      <ul>
+        <li>What key components when well during the class? What didn't? </li>
+      </ul>
+    </li>
+    <li>Class Synthesis
+      <ul>
+        <li>What questions did the students ask?</li>
+      </ul>
+    </li>
+    <li>Start (New, Innovation):</li>
+    <ul>
+      <li>Tips
+        <ul>
+          <li>If you did something differently what would it be?</li>
+        </ul>
+      </li>
+      <li>Aha&rsquo;s
+        <ul>
+          <li>What new ideas did you discover?</li>
+        </ul>
+      </li>
+    </ul>
+    <li>Stop (What didn&rsquo;t work):</li>
+    <ul>
+      <li>Traps </li>
+      <li>What would not be a good idea to do again?</li>
+    </ul>
+    <li>Continue (What worked):
+      <ul>
+        <li>Why did the activities work well? Was it the students, the teacher (presenter), the content, or activity?</li>
+      </ul>
+    </li>
+    <li>Humor
+      <ul>
+        <li>What was funny about the module? Something you said, students said, etc. that made the class more enjoyable?</li>
+      </ul>
+    </li>
+  </ul>
+  <p>&nbsp; </p>
+</article>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+{
+  "id": "b3bad392-31d0-4e17-ba65-f5a4bb6c1652",
+  "version": "2.0",
+  "name": "Lab 6: Validation of 6*7 ",
+  "url": "https://www.theonlinecalculator.com",
+  "tests": [{
+    "id": "4c0f681b-5c6f-4ca2-817a-70dafa222f4a",
+    "name": "6*7=42",
+    "commands": [{
+      "id": "0920affc-1f1e-458c-9d1f-a55d246cb479",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2a000cb-34b1-4035-b37e-1d0d4a69be7a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "988x1010",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a84769a2-1686-4a2c-8446-3836a740dc34",
+      "comment": "",
+      "command": "click",
+      "target": "name=six",
+      "targets": [
+        ["name=six", "name"],
+        ["css=div:nth-child(5) > .button:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='six']", "xpath:attributes"],
+        ["xpath=//form[@id='calculator']/div[5]/input[3]", "xpath:idRelative"],
+        ["xpath=//div[5]/input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89f0569f-1717-44bf-82a4-65beec1664a4",
+      "comment": "",
+      "command": "click",
+      "target": "name=multiply",
+      "targets": [
+        ["name=multiply", "name"],
+        ["css=div:nth-child(4) > .operator", "css:finder"],
+        ["xpath=//input[@name='multiply']", "xpath:attributes"],
+        ["xpath=//form[@id='calculator']/div[4]/input[4]", "xpath:idRelative"],
+        ["xpath=//div[4]/input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e22d4a75-f2b5-4e78-9f36-9e2213b9ca2d",
+      "comment": "",
+      "command": "click",
+      "target": "name=seven",
+      "targets": [
+        ["name=seven", "name"],
+        ["css=div:nth-child(4) > .button:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='seven']", "xpath:attributes"],
+        ["xpath=//form[@id='calculator']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "581a74f8-277e-4eed-baac-1ca4c8d892f9",
+      "comment": "",
+      "command": "click",
+      "target": "name=calculate",
+      "targets": [
+        ["name=calculate", "name"],
+        ["css=div:nth-child(7) > .operator", "css:finder"],
+        ["xpath=//input[@name='calculate']", "xpath:attributes"],
+        ["xpath=//form[@id='calculator']/div[7]/input[4]", "xpath:idRelative"],
+        ["xpath=//div[7]/input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7206232d-6822-498d-b94d-b6dc1532819f",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=display",
+      "targets": [],
+      "value": "42"
+    }]
+  }],
+  "suites": [{
+    "id": "7161886f-bc79-4c9d-bc1e-db4e38e8ade1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4c0f681b-5c6f-4ca2-817a-70dafa222f4a"]
+  }],
+  "urls": ["https://www.theonlinecalculator.com/"],
+  "plugins": []
+}

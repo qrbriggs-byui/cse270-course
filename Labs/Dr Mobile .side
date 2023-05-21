@@ -1,0 +1,499 @@
+{
+  "id": "7cb49d8f-e6d2-419d-9479-3ac6da944a38",
+  "version": "2.0",
+  "name": "Dr Mobile ",
+  "url": "https://byui-cse.github.io/cse270-course/Labs/DrMobil.html",
+  "tests": [{
+    "id": "dac3876d-b630-4261-9c8b-36a92056dcc4",
+    "name": "Dr. Mobile Login",
+    "commands": [{
+      "id": "3053f63f-e3f1-4102-8a3f-e9c8fcb592b2",
+      "comment": "",
+      "command": "open",
+      "target": "https://byui-cse.github.io/cse270-course/Labs/DrMobil.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e22d0292-e136-42e3-bb63-92c1f7d9af24",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1320x885",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7aa13280-2103-4c29-a7ce-8ab7b39e1403",
+      "comment": "",
+      "command": "click",
+      "target": "css=.userName",
+      "targets": [
+        ["css=.userName", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "709e72e2-f0a1-46e6-9d3e-aa3a68b7faa7",
+      "comment": "",
+      "command": "type",
+      "target": "css=.userName",
+      "targets": [
+        ["css=.userName", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": "William"
+    }, {
+      "id": "ba11a112-8d77-47f0-8387-acec5f2f770f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Enter",
+      "targets": [
+        ["css=.Enter", "css:finder"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e663aa2-9751-4676-bbd1-036fa34a871d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tc-title",
+      "targets": [
+        ["css=.tc-title", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'DrMobileHome')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f0a9880-fb73-43c1-9bd3-50c63fe905ac",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.tc-title",
+      "targets": [
+        ["css=.tc-title", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'DrMobileHome')]", "xpath:innerText"]
+      ],
+      "value": " DrMobileHome "
+    }]
+  }, {
+    "id": "10095f3f-a336-4546-9027-414592173d28",
+    "name": "Dr. Mobile _H_ome page",
+    "commands": [{
+      "id": "b786ba59-0aff-4dd6-9de7-7d1df00bde76",
+      "comment": "",
+      "command": "run",
+      "target": "Dr. Mobile Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7d16aee-d528-4cee-b8d5-18f014564800",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tc-tab-selected:nth-child(1)",
+      "targets": [
+        ["css=.tc-tab-selected:nth-child(1)", "css:finder"],
+        ["xpath=//div[5]/p/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'_H_')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5f7b0f5-fb01-4a0c-b488-fb7e18b73aa5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tc-table-of-contents > .tc-toc > .toc-item > .tc-tiddlylink .tc-image-down-arrow",
+      "targets": [
+        ["css=.tc-table-of-contents > .tc-toc > .toc-item > .tc-tiddlylink .tc-image-down-arrow", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e535136-8523-4a68-b506-6f80bbaa02d7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.toc-item:nth-child(1) > .tc-tiddlylink",
+      "targets": [
+        ["css=.toc-item:nth-child(1) > .tc-tiddlylink", "css:finder"],
+        ["xpath=(//a[contains(@href, '#Functions')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": "Functions"
+    }]
+  }, {
+    "id": "66b1a3d7-0114-4b71-8b0d-1dc2284787a5",
+    "name": "Dr. Mobile Add Patient C",
+    "commands": [{
+      "id": "afad19ab-f930-46bc-9bef-6072002ccb64",
+      "comment": "",
+      "command": "run",
+      "target": "Dr. Mobile Login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28e1c861-1b90-4c33-8801-77859f27bb48",
+      "comment": "",
+      "command": "click",
+      "target": "css=.userActions > button:nth-child(2)",
+      "targets": [
+        ["css=.userActions > button:nth-child(2)", "css:finder"],
+        ["xpath=//div[5]/p/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'PatientMenu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d0fbf99-f4df-4082-b880-a381e747b359",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tc-reveal:nth-child(2) .tc-tab-set button:nth-child(1)",
+      "targets": [
+        ["css=.tc-reveal:nth-child(2) .tc-tab-set button:nth-child(1)", "css:finder"],
+        ["xpath=//div[2]/p/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'AddPatient')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0acf4a2-aaa5-4a38-8ece-bd64929e3f6b",
+      "comment": "",
+      "command": "type",
+      "target": "css=p > input",
+      "targets": [
+        ["css=p > input", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "Patient C"
+    }, {
+      "id": "28732e3f-abb2-4712-8b44-96c90b42c472",
+      "comment": "",
+      "command": "click",
+      "target": "css=p:nth-child(2)",
+      "targets": [
+        ["css=p:nth-child(2)", "css:finder"],
+        ["xpath=//p[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3299eaf2-4298-4db9-b2dc-e00c8575bb78",
+      "comment": "",
+      "command": "click",
+      "target": "css=p:nth-child(2) > button",
+      "targets": [
+        ["css=p:nth-child(2) > button", "css:finder"],
+        ["xpath=//p[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Patient')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac5bbf82-ad8d-480c-a841-8ac35827c6d1",
+      "comment": "",
+      "command": "type",
+      "target": "css=p:nth-child(1) > input:nth-child(1)",
+      "targets": [
+        ["css=p:nth-child(1) > input:nth-child(1)", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/div/div/p/input", "xpath:position"]
+      ],
+      "value": "John"
+    }, {
+      "id": "8dda9b86-009d-4a70-b57b-fec798c678a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20e7e63a-0266-42d5-96bc-2a594a13656b",
+      "comment": "",
+      "command": "type",
+      "target": "css=input:nth-child(3)",
+      "targets": [
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Broken Leg"
+    }, {
+      "id": "4dc522a3-bb72-4800-a717-15fd62297cc5",
+      "comment": "",
+      "command": "click",
+      "target": "css=p > button:nth-child(1)",
+      "targets": [
+        ["css=p > button:nth-child(1)", "css:finder"],
+        ["xpath=//p[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Done')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "694be90e-5533-4e15-8f2c-f4a99a815720",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tc-reveal:nth-child(2) .tc-tab-buttons > button:nth-child(2)",
+      "targets": [
+        ["css=.tc-reveal:nth-child(2) .tc-tab-buttons > button:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/p/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Diagnosis')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d48fa8ad-e077-479e-9740-376383689c35",
+      "comment": "",
+      "command": "click",
+      "target": "css=select",
+      "targets": [
+        ["css=select", "css:finder"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "434ba152-2dc2-4964-a59d-0ba0d6c6064f",
+      "comment": "",
+      "command": "select",
+      "target": "css=select",
+      "targets": [],
+      "value": "label=Patient C"
+    }, {
+      "id": "e1146fd0-0a90-4022-b6c9-70bef07621b2",
+      "comment": "",
+      "command": "click",
+      "target": "css=option:nth-child(3)",
+      "targets": [
+        ["css=option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='Patient C']", "xpath:attributes"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Patient C')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5163728-3127-4615-80dc-217e447e7597",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.evenRow:nth-child(5) > td:nth-child(2)",
+      "targets": [
+        ["css=.evenRow:nth-child(5) > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[5]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Broken Leg')]", "xpath:innerText"]
+      ],
+      "value": "Broken Leg"
+    }]
+  }, {
+    "id": "f62a7670-ae76-44b3-9a2a-67bf05bed486",
+    "name": "Dr. Mobile Diagnosis Patient C",
+    "commands": [{
+      "id": "e23a6350-b94c-4073-80d8-988955531792",
+      "comment": "",
+      "command": "run",
+      "target": "Dr. Mobile Add Patient C",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db41d176-f61c-4fdd-b223-de0f88a5af46",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tc-reveal:nth-child(2) .tc-tab-buttons > button:nth-child(2)",
+      "targets": [
+        ["css=.tc-reveal:nth-child(2) .tc-tab-buttons > button:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/p/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Diagnosis')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "09fe1696-b24a-46f9-acc3-e0c6e9dc35d4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.tc-reveal:nth-child(2) .tc-tab-buttons > button:nth-child(2)",
+      "targets": [
+        ["css=.tc-reveal:nth-child(2) .tc-tab-buttons > button:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/p/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Diagnosis')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "37876515-22a4-4abb-88f5-a0e1339e3736",
+      "comment": "",
+      "command": "click",
+      "target": "css=select",
+      "targets": [
+        ["css=select", "css:finder"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ee96cff-2ce2-4d12-b835-144aa982783c",
+      "comment": "",
+      "command": "select",
+      "target": "css=select",
+      "targets": [],
+      "value": "label=Patient C"
+    }, {
+      "id": "b855bf93-b9e1-4643-803b-30787684c8c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=option:nth-child(3)",
+      "targets": [
+        ["css=option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='Patient C']", "xpath:attributes"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Patient C')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ecc34509-95c0-47d7-a0ab-6d1c7edfba53",
+      "comment": "",
+      "command": "type",
+      "target": "css=.evenRow:nth-child(1) > td:nth-child(2) > input",
+      "targets": [
+        ["css=.evenRow:nth-child(1) > td:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "101"
+    }, {
+      "id": "194270c8-4c25-46fc-acd7-3bcbf9168a50",
+      "comment": "",
+      "command": "click",
+      "target": "css=.oddRow:nth-child(2) > td:nth-child(2)",
+      "targets": [
+        ["css=.oddRow:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[2]/td[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e5e5348-6f86-4b1a-ae29-f4414533b041",
+      "comment": "",
+      "command": "click",
+      "target": "css=.oddRow:nth-child(2) input",
+      "targets": [
+        ["css=.oddRow:nth-child(2) input", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b792f30-edaa-4bb5-84b8-3d123fb85747",
+      "comment": "",
+      "command": "type",
+      "target": "css=.oddRow:nth-child(2) input",
+      "targets": [
+        ["css=.oddRow:nth-child(2) input", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "67"
+    }, {
+      "id": "befb80e4-5556-4d76-80dc-7748b58eaaaa",
+      "comment": "",
+      "command": "type",
+      "target": "css=.oddRow:nth-child(2) input",
+      "targets": [
+        ["css=.oddRow:nth-child(2) input", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "67"
+    }, {
+      "id": "1ad10636-3903-43e2-b114-d8434e7c46ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.evenRow:nth-child(3) input",
+      "targets": [
+        ["css=.evenRow:nth-child(3) input", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c875341-496f-4157-a1fe-daf35b6121bb",
+      "comment": "",
+      "command": "type",
+      "target": "css=.evenRow:nth-child(3) input",
+      "targets": [
+        ["css=.evenRow:nth-child(3) input", "css:finder"],
+        ["xpath=(//input[@type='text'])[3]", "xpath:attributes"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "95%"
+    }, {
+      "id": "2e778be0-70ac-4a5e-8efc-c38bc2784950",
+      "comment": "",
+      "command": "click",
+      "target": "css=.oddRow:nth-child(4) input",
+      "targets": [
+        ["css=.oddRow:nth-child(4) input", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "51d1c3f2-7c31-48fa-8fb0-779963b1049e",
+      "comment": "",
+      "command": "type",
+      "target": "css=.oddRow:nth-child(4) input",
+      "targets": [
+        ["css=.oddRow:nth-child(4) input", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "120/80"
+    }, {
+      "id": "935a85a5-73fb-4aca-9d0b-672e2f901dc2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tc-reveal:nth-child(2) .tc-tab-set button:nth-child(3)",
+      "targets": [
+        ["css=.tc-reveal:nth-child(2) .tc-tab-set button:nth-child(3)", "css:finder"],
+        ["xpath=//div[2]/p/div/div/button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Monitor')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "540c6c4d-f663-4f46-afac-2428263c72f7",
+      "comment": "Check Temperature",
+      "command": "assertText",
+      "target": "css=.evenRow:nth-child(1) > td:nth-child(2)",
+      "targets": [
+        ["css=.evenRow:nth-child(1) > td:nth-child(2)", "css:finder"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'101')]", "xpath:innerText"]
+      ],
+      "value": "101"
+    }, {
+      "id": "80384ef5-2884-4c44-a475-0bd29ede7a41",
+      "comment": "",
+      "command": "echo",
+      "target": "Check for Heartbeat",
+      "targets": [],
+      "value": "Check for Heartbeat - 67"
+    }, {
+      "id": "64db622e-34c0-4372-991a-131db2ab0655",
+      "comment": "",
+      "command": "echo",
+      "target": "Check for O2 Level",
+      "targets": [],
+      "value": "Check for O2 Level - 95%"
+    }, {
+      "id": "7a7e1b5a-6812-4cd3-84a7-0cb7c3456328",
+      "comment": "",
+      "command": "echo",
+      "target": "Check for Blood Pressure",
+      "targets": [],
+      "value": "Check for Blood Pressure - 120/80"
+    }]
+  }, {
+    "id": "1daa00ec-6abf-4239-a3f5-924b8fd5fbbb",
+    "name": "Dr. Mobile Order Supplies",
+    "commands": [{
+      "id": "38873867-76fc-4ad0-97a3-9e902490d465",
+      "comment": "",
+      "command": "run",
+      "target": "Dr. Mobile Login",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [],
+  "urls": ["https://byui-cse.github.io/", "https://byui-cse.github.io/cse270-course/Labs/DrMobil.html"],
+  "plugins": []
+}

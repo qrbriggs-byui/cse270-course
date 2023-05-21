@@ -1,0 +1,68 @@
+{
+  "id": "88472c2e-10a0-4995-9eea-393c0c20a782",
+  "version": "2.0",
+  "name": "CSE 270 Week 09 Lab",
+  "url": "https://byui-cse.github.io",
+  "tests": [{
+    "id": "eb119f80-615a-4596-ab13-0ffabc7ce274",
+    "name": "Dr. Mobile Login",
+    "commands": [{
+      "id": "6bf43e31-c1db-4742-a56c-4af313613947",
+      "comment": "",
+      "command": "open",
+      "target": "/cse270-course/Labs/DrMobil.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a18825ca-d70a-4860-a075-a9461a871133",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1294x1019",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "741b7b1f-d662-41dc-9ab0-5a84568de168",
+      "comment": "",
+      "command": "click",
+      "target": "css=.userName",
+      "targets": [
+        ["css=.userName", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e160fa86-725e-481d-aa8c-4dff3b7956db",
+      "comment": "",
+      "command": "type",
+      "target": "css=.userName",
+      "targets": [
+        ["css=.userName", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": "William"
+    }, {
+      "id": "06b2ca96-87e0-4267-9c96-7dee5358cb59",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Enter",
+      "targets": [
+        ["css=.Enter", "css:finder"],
+        ["xpath=//p/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c5fd1e45-95c2-4403-8fc8-2e6ba632c13c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://byui-cse.github.io/"],
+  "plugins": []
+}

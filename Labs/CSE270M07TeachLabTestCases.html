@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../site/style.css" />
+    <title>CSE 270 Teach Lab M07: Test Cases</title>
+</head>
+
+<body>
+<header id="courseTitle">
+        <span class="icon-byui-logo"></span>
+        <h1>CSE 270 Teach Lab M07: Test Cases</h1>
+    </header>
+
+<article>
+	<h1>Lab 07 – Electronic Sensor Test Case</h1>
+    <h2>Overview</h2>
+    <p>This lab will help you identify how to test for coverage. </p>
+    <h2>Assignment</h2>
+    <h3>Research the Mobile Phone sensors.</h3>
+    <p>Pick three sensors. Each provide a brief explanations of it capability in  regard to the for <a href="https://byui-cse.github.io/cse270-course/Labs/DrMobil.html">Dr.  Mobile</a>. Also a  list of &ldquo;Verify&rdquo; requirements statements. You will need to pick one of the  &ldquo;Verify&rdquo; requirement statements and research how that sensor can be tested. </p>
+    <p>See <a href="CSE270M05TeachLabQAMeasurement.html">Week 05 Lab</a> for additional tools to test these elements.</p>
+    <ul type="disc">
+      <li>Camera</li>
+      <ul type="circle">
+        <li>The        camera will essential for capturing information, scanning, and using VR        as part of the motion detection workflow.</li>
+        <li>Verify        that the camera can pick up close and far range. </li>
+        <li>Verify        that the camera can see IR light.</li>
+        <li>Verify        that the camera can see bright and low light.</li>
+      </ul>
+      <li>Barometer</li>
+      <ul type="circle">
+        <li>Understanding        the temperature and change weather patterns helps alert the EMP (Emergency        Medical Personal) to potential patient threats.</li>
+        <li>If        applicable, verify that the barometer can pick up pressure changes.</li>
+      </ul>
+      <li>Sound</li>
+      <ul type="circle">
+        <li>Besides        communication recording and making phone calls, it can help with diagnostics        of the patient, recording progress, or observation. It can be used to        pick distinct and distant noise that the EMP is not able to hear.</li>
+        <li>Verify        the range of sound that is detected by the device. </li>
+      </ul>
+      <li>Wi-Fi/Network</li>
+      <ul type="circle">
+        <li>Communication        can be within line of sight devices or with repeaters. In some cases, it        can detect outside elements. Devices can include patient monitoring,        device-to-device updates/alerts, or server communication. </li>
+        <li>Verify        that the different frequencies that the Wi-Fi can pick up and usage.</li>
+      </ul>
+      <li>Vibration</li>
+      <ul type="circle">
+        <li>Most        devices these days can go to silent mode, it can also pick up vibrations.        The detection allows for searching for trapped people, detecting body        injuries, other uses.</li>
+        <li>Verify        different types of vibrations.</li>
+      </ul>
+      <li>Touch</li>
+      <ul type="circle">
+        <li>The        touch capability enhances the user interface, also can include strength        tests, writing, etc.</li>
+        <li>Verify        the touch capability and sensitivity.</li>
+      </ul>
+      <li>Finger       Print</li>
+      <ul type="circle">
+        <li>For        security purposes, most laptops and tablets come with a figure print id.        This can also be used for identification purposes for patients.  </li>
+        <li>Verify        identification and scanning capabilities.</li>
+      </ul>
+      <li>Radio</li>
+      <ul type="circle">
+        <li>Like        a headphone cord, any mobile device can pick up FM/AM communication with        small antennas. With a more advanced plug-in, the device could pick up        other frequencies, from CB to Ham to Emergency broadcasting channels. </li>
+        <li>Verify        radio frequencies. </li>
+      </ul>
+      <li>Acceleromenter       / Gyroscope /Compass/GPS</li>
+      <ul type="circle">
+        <li>Most        tables can detect rotation on an X, Y, and Z corrident and gravity and        compass directions. Some can detect GPS signals. All of which can provide        the location, direction, and velocity. </li>
+        <li>Verify        Acceleromenter directions in X, Y, and Z.</li>
+        <li>Verify        Gyroscope directions in X, Y, Z</li>
+        <li>Verify        Compass, Magentic Field or Lat./Log. In scale and accuracy. </li>
+      </ul>
+    </ul>
+    <h3>Write test Cases</h3>
+    <p>Pick three sensors. For each sensor pick one of the &quot;verify&quot; requirement  statements to write a manual test. <br>
+      Use your own computer, mobile device or other equipment software to write  the tests. For the sensors, imagine that your current personal electronic  device, cell phone or tablet, is the device being used for Dr. Mobile. <br>
+      Post your tests on the discussion board. Include the test's title, an  overview of the tests, including the requirement, test type, and pre-conditions..</p>
+    <h4>Format: </h4>
+    <ul>
+      <li>Title:</li>
+      <li>Requirement:</li>
+      <li>Test Type:</li>
+      <li>Pre-conditions: </li>
+      <li>Steps: [ (A)ction/(Result)/(V)erify ]</li>
+      <ul>
+        <li>A: </li>
+        <li>R: </li>
+        <li>…</li>
+        <li>V: </li>
+      </ul>
+    </ul>
+    <h3>Reply</h3>
+    <p>Pick two different of your classmate's tests. Run through each of the tests  and make one suggestion or improvement. </p>
+    <h2>Submission</h2>
+    <p>Post your tests as three separate posts, and two replies</p>
+    <h2>Rubric</h2>
+    <p>Use the following rubric to help understand the expectation. </p>
+    <table border="0" cellpadding="0">
+      <tr>
+        <td><p align="center"><strong>&nbsp;</strong></p></td>
+        <td><p align="center"><strong>Exceptional<br>
+          100%</strong></p></td>
+        <td><p align="center"><strong>Good<br>
+          90%</strong></p></td>
+        <td><p align="center"><strong>Acceptable<br>
+          70%</strong></p></td>
+        <td><p align="center"><strong>Developing<br>
+          50%</strong></p></td>
+        <td><p align="center"><strong>Missing<br>
+          0%</strong></p></td>
+      </tr>
+      <tr>
+        <td><p align="center"><strong>Assignment 70%</strong></p></td>
+        <td><p>Test case contain all required detail.</p></td>
+        <td><p>Posted 3rd test case</p></td>
+        <td><p>Posted 2nd  test case</p></td>
+        <td><p>Posted 1st test case</p></td>
+        <td><p>No original post</p></td>
+      </tr>
+      <tr>
+        <td><p align="center"><strong>Reply 20%</strong></p></td>
+        <td><p>Improvements are show innovation and insight.</p></td>
+        <td><p>Relies are realivent and positive.</p></td>
+        <td><p>2nd improvement reply</p></td>
+        <td><p>1st Reply</p></td>
+        <td><p>No Reply</p></td>
+      </tr>
+      <tr>
+        <td><p align="center"><strong>Professionalism<br>
+          10%</strong></p></td>
+        <td><p>The paper is easy to read and communicated.</p></td>
+        <td><p>Properly cited, there are no grammar or spelling errors,    and the writing style is &quot;professional.&quot;</p></td>
+        <td><p>Found an instance of a spelling error, grammar error,    overly verbose wording, poor formatting, or poor writing. </p></td>
+        <td><p>A citation is missing where one is needed (plagiarism    alert!).</p></td>
+        <td><p>Gross spelling/grammar errors or other aspects of the    writing that make the paper difficult to read.</p></td>
+      </tr>
+    </table>
+</article>
+</body>
+</html>

@@ -1,0 +1,86 @@
+{
+  "id": "713c41fc-73c4-4e83-a928-020fb5609429",
+  "version": "2.0",
+  "name": "4-Function ",
+  "url": "https://www.desmos.com/fourfunction",
+  "tests": [{
+    "id": "aed6bca1-892c-4186-811c-73fbfa75d4e6",
+    "name": "Multiiply",
+    "commands": [{
+      "id": "1f4677a2-3796-48ad-ac64-dece31515925",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.desmos.com/fourfunction",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f22484d-608f-4662-9553-feff39d74b28",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "988x1001",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5854a127-1fc9-4e59-a41b-a9989f5625c0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='main']/div/div/div/div[5]/div[2]/div/div/div[4]/div[3]/span",
+      "targets": [
+        ["css=.dcg-hovered > .dcg-keypad-btn", "css:finder"],
+        ["xpath=//div[@id='main']/div/div/div/div[5]/div[2]/div/div/div[4]/div[3]/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce0e1ffb-982f-4c5d-955d-4aa8ae17c6ad",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='main']/div/div/div/div[5]/div[2]/div/div/div[2]/div[4]/span",
+      "targets": [
+        ["css=.dcg-hovered > .dcg-keypad-btn", "css:finder"],
+        ["xpath=//div[@id='main']/div/div/div/div[5]/div[2]/div/div/div[2]/div[4]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "01cfb456-07c2-40e1-81c3-d7b34b7e8289",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='main']/div/div/div/div[5]/div[2]/div/div/div[4]/div[3]/span",
+      "targets": [
+        ["css=.dcg-hovered > .dcg-keypad-btn", "css:finder"],
+        ["xpath=//div[@id='main']/div/div/div/div[5]/div[2]/div/div/div[4]/div[3]/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3595d3d-e470-4051-99b4-8c6d32e01276",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='main']/div/div/div/div[5]/div[2]/div/div/div[5]/div[4]/span",
+      "targets": [
+        ["css=.dcg-btn-short-blue", "css:finder"],
+        ["xpath=//div[@id='main']/div/div/div/div[5]/div[2]/div/div/div[5]/div[4]/span", "xpath:idRelative"],
+        ["xpath=//div[5]/div[4]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "51106dfd-423b-4f2f-bd63-30964b86b776",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.dcg-mq-digit:nth-child(2)",
+      "targets": [],
+      "value": "9"
+    }]
+  }],
+  "suites": [{
+    "id": "3ce8f46a-c631-4d5c-a4ff-89d16b6acc57",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.desmos.com/", "https://www.desmos.com/fourfunction"],
+  "plugins": []
+}

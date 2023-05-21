@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../site/style.css" />
+    <title>CSE 270 Teach Lab M02: Fundamentals of Testing</title>
+</head>
+
+<body>
+<header id="courseTitle">
+        <span class="icon-byui-logo"></span>
+        <h1>CSE 270 Teach Lab M02: Fundamentals of Testing</h1>
+    </header>
+
+<article>
+  <p>Not used</p>
+	<h1>Lab 02 - Camera's Autofocus Algorithm</h1>
+    <h2>Overview</h2>
+    <p>One of the features of <a href="https://byui-cse.github.io/cse270-course/Labs/DrMobil.html">Dr. Mobile</a> is its ability to gather input quickly. It does this through several sensors.  One of the primary sensors is the camera, which needs to be able to focus  quickly.<br>
+      As part of this assignment, you need to know a little about how a  current-gen cell phone's auto-focus works. Read &quot;How does autofocus work  on your smartphone.&quot; (<a href="https://www.giffgaff.com/blog/how-does-auto-focus-work-on-your-smartphone/">https://www.giffgaff.com/blog/how-does-auto-focus-work-on-your-smartphone/</a> ). The article discusses how different cameras are in today's cell phones when  using the focus feature. Your assignment is to determine three different ways  you would test a camera's autofocus. </p>
+    <h2>Assignment</h2>
+    <p>Your assignment is to determine three different ways to test a camera's  autofocus and develop a method to determine which type of focus algorithm is  best and how fast each works. </p>
+    <h3>Observations:</h3>
+    <p>The first step is to notice how your camera works. Using your camera (phone,  computer, personal) determines how quickly the camera can autofocus. Do this by  moving an object back and forth or moving from one focal point to another. How  far away does an object need to be to notice the difference?<br>
+      Notice how many times your camera adjusts to different distances before it  focuses. How did you detect it? </p>
+    <h3>Experiment:</h3>
+  <p>Run one or more of the following experiments:</p>
+    <ul type="disc">
+      <li>Use a red       filter or red light vs. a blue light to test focus.</li>
+      <li>Determine       the type of focus?: </li>
+      <ul type="circle">
+        <li>Determine        if your camera is using a phase by putting a cover on the lens.</li>
+        <li>Determine        if your camera is using a laser. Check I.R. with another camera.</li>
+      </ul>
+      <li>Experiment       with Distance? Too close, Too Far, Optimal</li>
+      <li>How does       light affect autofocus? Too dark, Too Light, Optimal</li>
+      <li>How does       color affect autofocus?</li>
+      <li>Where the       object is in view: Sides(Vertical vs Horizontal) vs Center</li>
+      <li>How does       movement affect the focus?</li>
+      <li>How quickly       can it adjust to two different distances?</li>
+      <li>For cell       phone, how does the front vs back camera differ?</li>
+      <li>How does       different textures affect the focus? Carpet vs Ceiling vs Wall or other</li>
+      <li>Place a       filter in front of the camera (sheet protector simulating smooges on the       lens)</li>
+    </ul>
+    <p>How you setup the experiment is up to you. The point of the  assignment is to have you learn how to test something you are unfamiliar with  and find thresholds of when something works or doesn&rsquo;t work anymore. </p>
+    <h3>Equation: </h3>
+    <p>Using the equation found in the article and values determine the time for a  Phase and a Laser, </p>
+    <ul type="disc">
+      <li>Distance       traveled by laser beam = Speed of Light * Time to receive reflection</li>
+      <li>Distance       to object = Distance traveled by laser beam / 2</li>
+    </ul>
+  <p>Did your experiments come close to the time? What was a  cause of the differences?</p>
+<h3>Test:</h3>
+    <p>Write up a test based on your findings that you could give to someone else,  possibly a family member, a neighbor, or a friend. Do this so that if they  followed your test, they could come up with the same results.<br>
+      Make sure you address these questions in your test: </p>
+    <ul type="disc">
+      <li>How will       the test be set up?</li>
+      <li>What is       the previous knowledge needed?</li>
+      <li>What steps       did you take to discover your results?</li>
+      <li>What were       the expected results? </li>
+      <li>Were you       able to break the camera's autofocus algorithm?</li>
+    </ul>
+    <h3>Follow up: </h3>
+    <p>Post a summary of your observation, experiment, equations, and tests, then  answer the following questions:</p>
+    <ul type="disc">
+      <li>Which of       the options would be best? </li>
+      <li>Did your       first attempt work successfully? Why or Why not? What did you learn for       the non-success or success?</li>
+    </ul>
+    <h2>Submission</h2>
+    <p>Post your test as a separate post on the discussion board.<br>
+      Reply to someone else's test by running through their test and let them know  if you got the same results. Provide 1-2 suggestions on how to improve their  test. Reply to someone else with results and improvement. </p>
+    <h2>Rubric</h2>
+    <p>Use the following rubric to help understand the expectation. </p>
+    <table border="0" cellpadding="0">
+      <tr>
+        <td><p align="center"><strong>&nbsp;</strong></p></td>
+        <td><p align="center"><strong>Exceptional<br>
+          100%</strong></p></td>
+        <td><p align="center"><strong>Good<br>
+          90%</strong></p></td>
+        <td><p align="center"><strong>Acceptable<br>
+          70%</strong></p></td>
+        <td><p align="center"><strong>Developing<br>
+          50%</strong></p></td>
+        <td><p align="center"><strong>Missing<br>
+          0%</strong></p></td>
+      </tr>
+      <tr>
+        <td><p align="center"><strong>Assignment 70%</strong></p></td>
+        <td><p>Answered followup questions</p></td>
+        <td><p>Wrote a test</p></td>
+        <td><p>Provide evidence of the experiment</p></td>
+        <td><p>Provided summary of observation</p></td>
+        <td><p>No original post</p></td>
+      </tr>
+      <tr>
+        <td><p align="center"><strong>Reply 20%</strong></p></td>
+        <td><p>1st &amp; 2nd Reply with replies and suggestions.</p></td>
+        <td><p>1st Reply with Suggestion and <br>
+          <br>
+          2nd Reply with results</p></td>
+        <td><p>1st Reply with Suggestion or <br>
+          <br>
+          2nd Reply with results</p></td>
+        <td><p>1st Reply with results</p></td>
+        <td><p>No Reply</p></td>
+      </tr>
+      <tr>
+        <td><p align="center"><strong>Professionalism<br>
+          10%</strong></p></td>
+        <td><p>The paper is easy to read and communicated.</p></td>
+        <td><p>Properly cited, there are no grammar or spelling errors,    and the writing style is &quot;professional.&quot;</p></td>
+        <td><p>Found an instance of a spelling error, grammar error,    incomplete citation, overly verbose wording, poor formatting, or poor    writing.</p></td>
+        <td><p>A citation is missing where one is needed (plagiarism    alert!).</p></td>
+        <td><p>Gross spelling/grammar errors or other aspects of the    writing that make the paper difficult to read.</p></td>
+      </tr>
+    </table>
+    <p>&nbsp;The distribution  of points starts at 50 percent for minimal expected participation; additional  work results increase the score. </p>
+</article>
+</body>
+</html>

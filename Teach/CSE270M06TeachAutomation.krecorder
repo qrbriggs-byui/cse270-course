@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Test Suites</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">What is 6*7?</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://www.theonlinecalculator.com/<datalist><option>https://www.theonlinecalculator.com/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=six<datalist><option>name=six</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=multiply<datalist><option>name=multiply</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=seven<datalist><option>name=six</option><option>name=seven</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=calculate<datalist><option>name=calculate</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=display<datalist><option>id=display</option></datalist></td><td>42</td>
+</tr>
+</tbody></table>
+</body>
+</html>

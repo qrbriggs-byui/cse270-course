@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../site/style.css" />
+    <title>CSE 270 Teach Lab M09: Regression Testing</title>
+</head>
+
+<body>
+<header id="courseTitle">
+        <span class="icon-byui-logo"></span>
+        <h1>CSE 270 Teach Lab M09: Regression Testing</h1>
+    </header>
+
+<article>
+	<h1>Lab 09 - Integration of Sensors</h1>
+	<h2>Overview</h2>
+  <p>In this lab we will use Selenium Software IDE to record our  test cases from last weeks assignment. </p>
+  <h2>Assignment</h2>
+  <h3>Add the Selenium IDE plug in.  </h3>
+  <p>The Selenium IDE work for Firefox  and for Chrome. For the sake of the lab, I will be giving directions for  downloading Chrome&rsquo;s extention. Goto Chromes web store and select Selenium IDE.<br>
+    <img width="624" height="257" src="CSE270M09TeachLabIntegration_clip_image002.jpg"></p>
+  <p>Add the Selenium IDE extension, by selecting Add  to Chrome.<br>
+    <img width="624" height="201" src="CSE270M09TeachLabIntegration_clip_image002_0000.jpg">
+  </p>
+  <p>Agree to the permissions, by clicking Add Extension:<br>
+    <img width="462" height="282" src="CSE270M09TeachLabIntegration_clip_image001.png">
+  </p>
+  <p>Reading information box<br>
+  <img width="390" height="267" src="CSE270M09TeachLabIntegration_clip_image001_0000.png"></p>
+  <h3>Open Selenium IDE Project</h3>
+  <p>Save off the <a href="DrMobileTests.side">Dr.  Mobile Selenium IDE Project File</a>. </p>
+<blockquote>
+  <p>Click on the Selenium icon in the  plug-ins<br>
+    <img width="437" height="304" src="CSE270M09TeachLabIntegration_clip_image001_0001.png"></p>
+It will then bring up Selenium IDE.<br>
+  <img width="367" height="470" src="CSE270M09TeachLabIntegration_clip_image002_0001.jpg"> <br>
+  Click &ldquo;Open an existing project&rdquo;, select  the location of where you saved the file, and select the file, &ldquo;DrMobileTests.side&rdquo;.  (Note: *.side, stands for Selenium IDE)
+</blockquote><p>You should see, the following tests  in the diagram.<br>
+  <img width="295" height="338" src="CSE270M09TeachLabIntegration_clip_image002_0002.jpg" alt="Graphical user interface, application  Description automatically generated"></p>
+<h3>Run Dr. Mobile Tests</h3>
+<p>Pre-Conditions: In the top-left corner,  under Project: , verify that Tests is selected and not Test suites or  Executing.<br>
+  <strong>As part of this step you need to take screen shots of  your IDE. Please open and save a document that you will submit as part of this  lab. </strong></p>
+<ul>
+  <li><strong>Run Dr. Mobile _H_ome page test</strong>, by  clicking on the test, and clicking on the Run icon<img width="52" height="51" src="CSE270M09TeachLabIntegration_clip_image001_0002.png" alt="Graphical user interface, application  Description automatically generated"></li>
+</ul>
+<p><img width="398" height="264" src="CSE270M09TeachLabIntegration_clip_image002.png" alt="Graphical user interface, text, application  Description automatically generated"><br>
+  The test should bring up Dr. Mobile Webpage, Login and show the _H_ome  page. In the Log, you should see lines that says:</p>
+<ul>
+  <ul>
+    <li><strong>4.assertText on css=.toc-item:nth-child(1)  &gt; .tc-tiddlylink with value Functions OK </strong></li>
+    <li><strong>'Dr. Mobile  _H_ome page' completed successfully</strong></li>
+  </ul>
+</ul>
+<p><strong>Save a screen shot of  this test run to your document.</strong></p>
+<ul>
+  <li>Run the Add Patient C test. The test should Login,  Add Patient C to the list of Patients, and verify by going to Diagnosis page.  You should see the following in the Log: </li>
+  <ul>
+    <li><strong>15.assertText  on css=.evenRow:nth-child(5) &gt; td:nth-child(2) with value Broken Leg OK </strong></li>
+    <li><strong>'Dr. Mobile Add Patient C' completed successfully</strong></li>
+  </ul>
+</ul>
+<p><strong>Save a screen shot of  this test run to your document.</strong></p>
+<ul>
+  <li>Run the Diagnosis Patient. The test should Login,  Add Patient C, and Enter diagnosis vitals. You should see the following in the Log:</li>
+  <ul>
+    <li><strong>17.assertText  on css=.evenRow:nth-child(1) &gt; td:nth-child(2) with value 101 OK </strong></li>
+    <li><strong>echo:  Check for Heartbeat</strong></li>
+    <li><strong>echo:  Check for O2 Level </strong></li>
+    <li><strong>echo:  Check for Blood Pressure </strong></li>
+    <li><strong>'Dr. Mobile Diagnosis Patient C' completed successfully</strong></li>
+  </ul>
+</ul>
+<p><strong>Save a screen shot of this test  run to your document.</strong></p>
+<h3>Modify Dr. Mobile – Diagnosis Patient Test</h3>
+<p>You will notice in the last run of  the Dr. Mobile Diagnosis Test, that there were three echo statements after the assertText  and the before the &lsquo;successfully&rsquo; statement. We are going to change those  statement to &lsquo;assert&rsquo; statement. <br>
+  An assert statement is the same to  a verify statement in our previous manual tests. <br>
+  In on Line 18 of the Dr. Mobile  Diagnosis Patient Commands, change the Command &lsquo;echo&rsquo; to &lsquo;assert text&rsquo;. You can  either pick it from the drop down menu or copy and paste it in. You need to  update the target by using the select target in page button next to the Target&rsquo;s  textbox, and select the table cell that contain the Heartbeat or type in the  following: &ldquo;css=.evenRow:nth-child(2) &gt; td:nth-child(2)&rdquo;. For the value it  should be 67. <br>
+  Repeat the process on lines 19 and  20. </p>
+<table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="102" valign="top"><p>&nbsp;</p></td>
+    <td width="102" valign="top"><p>Line</p></td>
+    <td width="133" valign="top"><p>Command</p></td>
+    <td width="120" valign="top"><p>Target</p></td>
+    <td width="118" valign="top"><p>Value</p></td>
+  </tr>
+  <tr>
+    <td width="102" valign="top"><p>Temperature</p></td>
+    <td width="102" valign="top"><p>17</p></td>
+    <td width="133" valign="top"><p>assert text</p></td>
+    <td width="120" valign="top"><p>css=.evenRow:nth-child(1)    &gt; td:nth-child(2)</p></td>
+    <td width="118" valign="top"><p>101</p></td>
+  </tr>
+  <tr>
+    <td width="102" valign="top"><p>Heartbeat</p></td>
+    <td width="102" valign="top"><p>18</p></td>
+    <td width="133" valign="top"><p>assert text</p></td>
+    <td width="120" valign="top"><p>css=.oddRow:nth-child(2)    &gt; td:nth-child(2)</p></td>
+    <td width="118" valign="top"><p>67</p></td>
+  </tr>
+  <tr>
+    <td width="102" valign="top"><p>O2 Level</p></td>
+    <td width="102" valign="top"><p>19</p></td>
+    <td width="133" valign="top"><p>assert text</p></td>
+    <td width="120" valign="top"><p>css=.evenRow:nth-child(3)    &gt; td:nth-child(2)</p></td>
+    <td width="118" valign="top"><p>95%</p></td>
+  </tr>
+  <tr>
+    <td width="102" valign="top"><p>Blood    Pressure</p></td>
+    <td width="102" valign="top"><p>20</p></td>
+    <td width="133" valign="top"><p>assert text</p></td>
+    <td width="120" valign="top"><p>css=.oddRow:nth-child(4)    &gt; td:nth-child(2)</p></td>
+    <td width="118" valign="top"><p>120/80</p></td>
+  </tr>
+</table>
+<p>Run test  again. Save a screen shot of  this test run to your document.</p>
+<h3>Record ORDER Supplies Test. </h3>
+<p>For this test you will be recording  steps using Selenium IDE. <br>
+  You will clicking on Communicate  tab, and then the Order Supplies tab. After that you will need to click on each  of the checkbox widgets. Try it now. Notice that the status changes from Order  to &lsquo;Need to Order&rsquo;<br>
+  Now lets record the steps. From Selenium  IDE window, click on the Dr. Mobile Order Supplies test. Run the test. You should  see it Login and bring up the Home page. <br>
+  Click on line 2, the line under  line 1, blue.<br>
+  <img width="624" height="136" src="CSE270M09TeachLabIntegration_clip_image002_0003.jpg" alt="Graphical user interface, text, application, email  Description automatically generated"><br>
+  Now click on the (Rec) button. The browser  should come up with it indicating that Selenium is now recording. </p>
+<p><img width="310" height="209" src="CSE270M09TeachLabIntegration_clip_image002_0004.jpg" alt="Graphical user interface, application  Description automatically generated"><br>
+Run through the previous steps: </p>
+<ul>
+  <li>Click on the Communicate Tab</li>
+  <li>Click on the OrderSupplies Tab</li>
+  <li>Click on each of the items to order.</li>
+</ul>
+<p>Click on the Selenium IDE and click  the stop ([]) button. <br>
+  Run the test. <br>
+  <strong>Take a screen shot of the Selenium  IDE app. Save a screen shot  of this test run to your document.</strong></p>
+<p>Save the Dr. Mobile Project File. <img width="167" height="113" src="CSE270M09TeachLabIntegration_clip_image001_0003.png" alt="Graphical user interface, application  Description automatically generated"> Close the IDE. </p>
+<p>&nbsp;</p>
+<h2>Submission</h2>
+<p>Submit the following::</p>
+<ul type="disc">
+  <li>Document       containing the screen shots. </li>
+  <li>Saved Selenium       IDE File. </li>
+</ul>
+<p>&nbsp;</p>
+<h2>Rubric</h2>
+<p>Use the following rubric to help understand the expectation. </p>
+<table border="0" cellpadding="0">
+  <tr>
+    <td><p align="center"><strong>&nbsp;</strong></p></td>
+    <td><p align="center"><strong>Exceptional</strong><strong><br>
+      <strong>100%</strong></strong></p></td>
+    <td><p align="center"><strong>Good</strong><strong><br>
+      <strong>90%</strong></strong></p></td>
+    <td><p align="center"><strong>Acceptable</strong><strong><br>
+      <strong>70%</strong></strong></p></td>
+    <td><p align="center"><strong>Developing</strong><strong><br>
+      <strong>50%</strong></strong></p></td>
+    <td><p align="center"><strong>Missing</strong><strong><br>
+      <strong>0%</strong></strong></p></td>
+  </tr>
+  <tr>
+    <td><p align="center"><strong>Run Dr. Mobile tests 45%</strong></p></td>
+    <td><p>Evidence of running Diagnosis test</p></td>
+    <td><p>Evidence of running Add Patient </p></td>
+    <td><p>Evidence of running _H_ page</p></td>
+    <td><p>Evidence of IDE installed</p></td>
+    <td><p>No evidence</p></td>
+  </tr>
+  <tr>
+    <td><p align="center"><strong>Modify Diagnosis tests 25%</strong></p></td>
+    <td><p>Blood Pressure assert step was successful</p></td>
+    <td><p>O2 Level assert step was successful</p></td>
+    <td><p>Heartbeat assert step was successful</p></td>
+    <td><p>Temperature assert step was successful</p></td>
+    <td><p>No evidence of Modified Tests </p></td>
+  </tr>
+  <tr>
+    <td><p align="center"><strong>Run Automated tests 25%</strong></p></td>
+    <td><p>All items were  successful</p></td>
+    <td><p>Some of the items were successfully executed</p></td>
+    <td><p>Screenshot of recording was made</p></td>
+    <td><p>Attempt was made to record </p></td>
+    <td><p>No recording found</p></td>
+  </tr>
+  <tr>
+    <td><p align="center"><strong>Professionalism<br>
+      10%</strong></p></td>
+    <td><p>The paper is easy to read and communicated.</p></td>
+    <td><p>Properly cited, there are no grammar or spelling errors,    and the writing style is &quot;professional.&quot;</p></td>
+    <td><p>Found an instance of a spelling error, grammar error,    incomplete citation, overly verbose wording, poor formatting, or poor    writing. </p></td>
+    <td><p>A citation is missing where one is needed (plagiarism    alert!).</p></td>
+    <td><p>Gross spelling/grammar errors or other aspects of the    writing that make the paper difficult to read.</p></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</article>
+</body>
+</html>

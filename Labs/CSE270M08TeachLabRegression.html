@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../site/style.css" />
+    <title>CSE 270 Teach Lab M00: Weekly Topic</title>
+</head>
+
+<body>
+<header id="courseTitle">
+        <span class="icon-byui-logo"></span>
+        <h1>CSE 270: Teach Lab M00: Weekly Topic</h1>
+    </header>
+
+<article>
+	<h1>Lab 08 - Executing Regression Test</h1>
+    <h2>Overview</h2>
+    <p><a href="https://byui-cse.github.io/cse270-course/Labs/DrMobil.html">Dr.  Mobile</a> is to help Emergency Medical Personal with rescue and aid in times  of disaster. There is a general workflow that any medical personal does to  complete their task to stabilize a person.<br>
+      As you read about the workflow, imagine the following natural disasters that  might happen</p>
+    <ul type="disc">
+      <li>Hurricane</li>
+      <li>Earthquake</li>
+      <li>Blizzard</li>
+      <li>Avalanche</li>
+      <li>Forest       Fire</li>
+      <li>Airplane       Crash</li>
+      <li>Traffic       Accident</li>
+      <li>Flooding</li>
+    </ul>
+    <h3>Workflow</h3>
+    <p>Each activity in the workflows allow the EMP to accomplish some task with  the Dr. Mobile Application: </p>
+    <ul type="disc">
+      <li>Patient       Identification </li>
+      <ul type="circle">
+        <li>Collect        found patient's information. Typically, this information is a one-time        collection. </li>
+        <ul type="square">
+          <li>Name.</li>
+          <li>Fingerprints.</li>
+          <li>Location.</li>
+          <li>Race, </li>
+          <li>Weight/Body         Mass.</li>
+          <li>Height.</li>
+        </ul>
+      </ul>
+      <li>Diagnose </li>
+      <ul type="circle">
+        <li>o        Once some quick information is collected, continue collecting finer        details about the patient's condition. </li>
+        <ul type="square">
+          <li>Temperature         - is the patient running a fever, infectious, or showing signs of shock.</li>
+          <li>Heartbeat         - is the patient's heartbeat high.</li>
+          <li>Blood         pressure - determine if the patient has high, low, or normal blood         pressure.</li>
+          <li>Breathing         - determine for substances, CO2 content.</li>
+          <li>Oxygen         level - does the patient have low oxygen levels.</li>
+          <li>Skin         moisture - slightly different than normal Temperature, as a patient         could be in shock and sweating but not having a fever. </li>
+          <li>Eye         exam - could tell about concussion.</li>
+        </ul>
+        <li>Additional        detailed scans: </li>
+        <ul type="square">
+          <li>Bone         - portable X-ray could check for bone damage.</li>
+          <li>Neuropathy/Electrical         – evaluation of nerve, brain, and respiratory systems.</li>
+          <li>Muscle         &amp; vain - scan for Muscle tears, bruising and internal bleeding.</li>
+          <li>Skin         - checking for burns, veins, and radiation.</li>
+        </ul>
+      </ul>
+      <li>Treat </li>
+      <ul type="circle">
+        <li>Disinfect        - UV disinfection equipment, wounds.</li>
+        <li>Treatment        method.</li>
+        <li>Advice        from home base.</li>
+      </ul>
+      <li>Monitor       Patient </li>
+      <ul type="circle">
+        <li>After        the patient is </li>
+        <ul type="square">
+          <li>IV         Monitoring.</li>
+          <li>External         Wristband. </li>
+          <ul type="square">
+            <li>Heart.</li>
+            <li>O2.</li>
+            <li>Temperature.</li>
+            <li>Blood          pressure.</li>
+            <li>Skin          moisture.</li>
+          </ul>
+        </ul>
+        <li>Device        to Device redundancy. </li>
+        <ul type="square">
+          <li>§         Check for similar events in the same location.</li>
+          <li>Bi-location         of scans.</li>
+        </ul>
+      </ul>
+      <li>Order       Supplies </li>
+      <ul type="circle">
+        <li>Collection        of supplies on hand.</li>
+        <li>Monitory        supplies in use.</li>
+        <li>Resource        frequency checking.</li>
+        <li>Restocking</li>
+      </ul>
+    </ul>
+    <h2>Assignment</h2>
+    <p>You will create two sets of manual regression tests for two different situations  that will test capabilities of the workflow. The following is one regression test for one of the steps of the workflow that would  test the workflow of <a href="https://byui-cse.github.io/cse270-course/Labs/DrMobil.html">Dr. Mobile</a>.  The rest you need to feel in. Using the <a href="https://byui-cse.github.io/cse270-course/Labs/DrMobil.html">Dr.  Mobile</a> App simulator as reference to answer the following questions to assist you in creating the test cases. You  can either use the happy path, where everything works, create a problem and  point out where the system might fail. <br>
+      Start with a situation, use the workflow (search, identify, diagnose, treat,  monitor, order supplies) to identify the steps. <br>
+      Start with this situation, Avalanche:</p>
+    <h3>SITUATION – 1st Post</h3>
+    <ul>
+      <li><strong>When</strong>: During Christmas break in  Vail, CO, the area has been experiencing a warm and cooling spell with a  significant snow amount. On December 27th, a major avalanche occurred, and a  team of 3 EMP was dispatch as first responders, each equipped with <a href="https://byui-cse.github.io/cse270-course/Labs/DrMobil.html">Dr. Mobile</a>.</li>
+    </ul>
+    <h3>Patient Identification</h3>
+    <ul>
+      <ul>
+        <li><strong>Who</strong>: What will be done to id  the patient?</li>
+        <li><strong>Assumption:</strong></li>
+        <ul>
+          <li><strong>EMP  has already logged in</strong></li>
+          <li><strong>EMP  is at the DrMobileHome page, and click on the PatientMenu</strong></li>
+        </ul>
+        <li><strong>Steps</strong>:</li>
+        <ul>
+          <li><strong>A:  EMP clicks on AddPatient tab</strong></li>
+          <li>R: Add Patient options is display on menu</li>
+          <li>A: EMP enters patient id, &ldquo;Patient C&rdquo;  in &ldquo;Enter New Id&rdquo; text field, and clicks Add  Patient</li>
+          <li>R: Patient Name is add to the list of &ldquo;Current  Patients&rdquo; right after Patient B.</li>
+          <li>R: Two additional fields &ldquo;Enter First Name&rdquo; and  &ldquo;Enter Description&rdquo; appear. </li>
+          <li>A: EMP enters patient name &ldquo;John Smith&rdquo; in  &ldquo;Enter First Name&rdquo;.</li>
+          <li>A: EMP enters patient description &ldquo;Found in snow  bank&rdquo; in &ldquo;Enter Description&rdquo;</li>
+          <li>A: EMP click Done.</li>
+          <li>V: Fields disappear </li>
+        </ul>
+      </ul>
+    </ul>
+    <h3>Diagnose</h3>
+    <ul>
+      <ul>
+        <li><strong>What</strong>: What is the problem with the  patient?</li>
+      </ul>
+    </ul>
+    <h3>Treat</h3>
+    <ul>
+      <ul>
+        <li><strong>How</strong>: How will the patient be  stabilized?</li>
+      </ul>
+    </ul>
+    <h3>Monitor</h3>
+    <ul>
+      <ul>
+        <li><strong>How: </strong>How will the patient be  monitored until and during transport?</li>
+      </ul>
+    </ul>
+    <h3>Order Supplies</h3>
+  <ul>
+      <ul>
+        <li><strong>What</strong> supplies are now needed? </li>
+      </ul>
+    </ul>
+
+    <h2>Next Regression Test - 2nd post</h2>
+    <p>Using a different situation, create a backstory, and run through the same  workflow for your situation. </p>
+    <h2>Fault Tolerance</h2>
+    <p>Remember, the system doesn't always work the way it is supposed to. Read a  classmate's situation, identify a fault, and explain how the system should  react. What other situations would a classmate's regression test validate?</p>
+    <h2>Submission</h2>
+    <p>Submit two posts, one about the Avalanche and the other of your scenario.<br>
+      Submit reply to classmate's situation. </p>
+    <h2>Rubric</h2>
+    <p>Use the following rubric to help understand the expectation. </p>
+    <table border="0" cellpadding="0">
+      <tr>
+        <td><p align="center"><strong>&nbsp;</strong></p></td>
+        <td><p align="center"><strong>Exceptional<br>
+          100%</strong></p></td>
+        <td><p align="center"><strong>Good<br>
+          90%</strong></p></td>
+        <td><p align="center"><strong>Acceptable<br>
+          70%</strong></p></td>
+        <td><p align="center"><strong>Developing<br>
+          50%</strong></p></td>
+        <td><p align="center"><strong>Missing<br>
+          0%</strong></p></td>
+      </tr>
+      <tr>
+        <td><p align="center"><strong>1st Post 35%</strong></p></td>
+        <td><p>Include Supplies</p></td>
+        <td><p>Summary  include    Treat and Monitor</p></td>
+        <td><p>Summary includes Patient Id and Diagnose</p></td>
+        <td><p>The summary scenario</p></td>
+        <td><p>No original post</p></td>
+      </tr>
+      <tr>
+        <td><p align="center"><strong>2nd Post 35%</strong></p></td>
+        <td><p>Include Supplies</p></td>
+        <td><p>Summary  include    Treat and Monitor</p></td>
+        <td><p>Summary includes Patient Id and Diagnose</p></td>
+        <td><p>The summary scenario</p></td>
+        <td><p>No original post</p></td>
+      </tr>
+      <tr>
+        <td><p align="center"><strong>Fault Tolerance    (Reply) 20%</strong></p></td>
+        <td><p>Reply include another scenario.</p></td>
+        <td><p>The reply includes system reaction</p></td>
+        <td><p>The reply is on the subject and has identified fault </p></td>
+        <td><p>The reply does not reflect the scenario or doesn't mention    fault tolerance</p></td>
+        <td><p>No Reply</p></td>
+      </tr>
+      <tr>
+        <td><p align="center"><strong>Professionalism<br>
+          10%</strong></p></td>
+        <td><p>The paper is easy to read and communicated.</p></td>
+        <td><p>Properly cited, there are no grammar or spelling errors,    and the writing style is &quot;professional.&quot;</p></td>
+        <td><p>Found an instance of a spelling error, grammar error,    incomplete citation, overly verbose wording, poor formatting, or poor    writing. </p></td>
+        <td><p>A citation is missing where one is needed (plagiarism    alert!).</p></td>
+        <td><p>Gross spelling/grammar errors or other aspects of the    writing that make the paper difficult to read.</p></td>
+      </tr>
+    </table>
+</article>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../site/style.css" />
+    <title>CSE 270: W02 Lab: Auto-Focus</title>
+  </head>
+  <body>
+    <header id="courseTitle">
+      <span class="icon-byui-logo"></span>
+      <h1>CSE 270: W02 Lab: Auto-Focus</h1>
+    </header>
+    <article>
+
+      <p>Now that we understand how the auto-focus system on your camera <em>should</em> work, the final step is to find out how it <em>actually</em> works. To do this, we will create a test plan, conduct our tests, and report on our findings.</p>
+      <h2>Test Plan</h2>
+      <p>A test plan is a series of experiments that we can follow to learn more about the unit under test. We call these experiments &quot;test cases.&quot; Each test case is individually described with sufficient detail that anyone can carry out.<br>
+        A test plan consists of the following elements:&nbsp;&nbsp;</p>
+      <ul type="disc">
+        <li><strong>ID</strong> - a unique identification of the test plan</li>
+        <li><strong>Plan      name</strong>: A common name identifier,      i.e. Camera Focus Test Plan</li>
+        <li><strong>Description      or Summary</strong> - notes as to the purpose of      the tests</li>
+        <li><strong>Pre-requisites</strong> - any previous plans, setup, or resources that are required before      starting the test plan</li>
+        <li><strong>Category/Component</strong> - focus on which element of the software the test plan focuses on. For      example, if a software system has multiple features, this section      identifies the specific component or category of quality.</li>
+        <li><strong>Author/POC</strong> - who wrote this test plan or who is the Point Of Contact for fixes,      questions, or issues with the test plan</li>
+        <li><strong>Requirement/Story      mapping set</strong>: Identity which requirement,      design elements, or story this test is verifying. </li>
+        <li><strong>Tests Cases      – </strong>Each test plan has one or more test cases. Each test      case consists of at least two test steps, <strong>Action/Results</strong>, and <strong>Action/Verify</strong> pairs, where Action/Results repeats until you can get to a point where you      verify a requirement using Action/Verify.</li>
+        <ul type="circle">
+          <li><strong>Test       Case Name</strong>: Unique identification of       test case</li>
+          <li><strong>Test       Steps</strong>- series of tests that verify       the software feature </li>
+          <ul type="square">
+            <li>Each        test contains specific step-by-step instructions, with results of the        actions until the feature or requirement is verified. </li>
+            <li>Tests        consist of a set of steps: With an <strong>(A)ction</strong> followed by a <strong>(R)esults</strong>,        until you <strong>(V)erify</strong> the requirement or feature</li>
+          </ul>
+          <li><strong>Action</strong> – identifies explicitly what needs to happen in a logical sequence. </li>
+          <ul type="square">
+            <li><strong>Results</strong>:        What were the results of the Action? Success is either pass/fail.</li>
+          </ul>
+          <li><strong>…Repeat       until…</strong></li>
+          <li><strong>Action</strong></li>
+          <ul type="square">
+            <li><strong>Verify: </strong>The previous action verified a requirement. –        Indicate Pass or Fail</li>
+          </ul>
+        </ul>
+      </ul>
+      <p>So what makes for a good test case? It should have four properties:</p>
+      <ul type="disc">
+        <li><strong>Understandable</strong>:      If a tester other than the author needs to implement or modify a test      case, this tester needs to understand the test case. Documentation,      unambiguous instructions, and standard use of terminology or procedures      help with the understandability of the test case.</li>
+        <li><strong>Valid</strong>:      Each test case should map directly to a feature or design characteristic      of the system. Thus, if an experiment were to fail, it would be easy to      see how the failure is tied to a customer or user&rsquo;s need.</li>
+        <li><strong>Reliable</strong>:      If a test case has a large number of false-positives (instances when      errors are reported when none exist), false-negatives (an error exists      that is not reported), or the test case produces weird data due to errors      in how it is conducted, then people will trust the test caseless. Ideally,      our test case should be repeatable, and the resulting data has little      noise.</li>
+        <li><strong>Efficient</strong>:      A well-written test case should execute with little effort or, better yet,      automatically. The longer it takes to complete a test plan, the more      maintenance cost.</li>
+      </ul>
+      <p>Much like the PB&amp;J video, make sure your steps are clear, precise and you don't skip any steps. </p>
+      <p>If you are having trouble coming up with test cases, try the following:</p>
+      <ul type="disc">
+        <li>What is      the minimum focus distance? How far away from the subject must the camera      be before the auto-focus work?</li>
+        <li>How      does color affect auto-focus?</li>
+        <li>How      does movement affect auto-focus?</li>
+        <li>Can the      camera focus on something not in the middle of the field of view?</li>
+        <li>Do      different textures affect the auto-focus? Consider carpet vs. a wall vs.      grass, for example.</li>
+        <li>What      happens when you place a filter (screen protector, clear plastic, etc.) in      front of the lens?</li>
+        <li>How      much light do you need for the auto-focus to work? For example, daylight      vs. inside vs. dark.</li>
+        <li>If the      camera uses a laser or something similar, what happens when it is covered?</li>
+        <li>If your      camera has more than one camera, do they behave differently?</li>
+      </ul>
+      <p>Your test plan should have at least a half-dozen test cases. Make sure each test case includes the precise steps that one must carry out to get the desired data. Feel free to use your or your classmates research to create these test cases. </p>
+      <p>You test case should verify a requirement, feature or story associated with camera auto-focus. You will need to determine that from your research or your classmates' research. Remember, a requirement use the word &quot;shall&quot;, and a story use the format, &quot;As &lt;role&gt;, I want to &lt;requirement/what&gt;, so that &lt;why&gt;&quot;.</p>
+      <p> Ask two individuals to execute your test plan. Both should perform precisely the same actions and give you very similar data.</p>
+      <h2>Conduct the Tests</h2>
+      <p>With the test plan created, the next step is to execute it. For each test case, conduct it as precisely as you can. If you are lax or imprecise about executing each step, you might have reliability issues with your data. In other words, executing the same test case twice might not yield the same results. This is a bad thing!<br>
+        Note that you may notice errors in your test plan as you conduct a given test. If this is to happen, update your test case with better instructions.<br>
+        Carefully record your results. Record exactly what you did and what results in you were able to observe. Note that your test case may list the expected outcome of a given action. If the outcome was the same or different from what was expected, record that fact.</p>
+      <h2>Report your Findings</h2>
+      <p>The last part of this lab is to write a report describing your findings. This report consists of each test case in your test plan. There should be six sections in your account if there are six test cases. Each section must have the following information:</p>
+      <ol start="1" type="1">
+        <li>Name of      the test case</li>
+        <li>The      test case should be listed in your test plan.</li>
+        <li>Exactly      what happened when you conducted the test.</li>
+        <li>What      was learned from the test case? Did the camera behave as you expected it      to? Was the collected data within the expected range of values?</li>
+      </ol>
+      <p>Each test case should be between a quarter and a half page.</p>
+      <h2>Submission</h2>
+      <p>You will submit a test plan. </p>
+      <ul>
+        <li>Page one will consist of Test Plan ID, Name, Description/Summary, Pre-requisite, Category/Component, Author/POC, Requirement/Story, List of Test Cases</li>
+        <li>Each follow-on page will consist of Test Cases, containing Test case name and case steps (A/R or A/V). You will need a minimum of 6 test cases. </li>
+        <li>Last page: Result Summary: As part of understandable, valid, reliable, and efficient include the results of running your test multiple times. </li>
+      </ul>
+
+      <h2>Assessment</h2>
+      <p>Your submission will be evaluated according to the following rubric:</p>
+      <table class="rubric">
+        <tbody>
+          <tr>
+            <th>&nbsp;</th>
+            <th>Exceptional<br/>100%</th>
+            <th>Good<br/>90%</th>
+            <th>Acceptable<br/>70%</th>
+            <th>Developing<br/>50%</th>
+            <th>Missing<br/>0%</th>
+          </tr>
+          <tr>
+            <th>Test Plan<br/>40%</th>
+<!-- 100 --><td>Each test case is understandable, valid, reliable, and efficient</td>
+<!-- 90  --><td>Each test case is unambiguously described</td>
+<!-- 70  --><td>One or more test cases are incomplete</td>
+<!-- 50  --><td>An attempt was made to describe six test cases</td>
+<!-- 0   --><td>Less than six test cases are present or the tests are not adequately described</td>
+          </tr>
+          <tr>
+            <th>Test Results<br/>40%</th>
+<!-- 100 --><td>Every detail is present about what happened during each test</td>
+<!-- 90  --><td>The result of each test is reported</td>
+<!-- 70  --><td>One or two key details are missing</td>
+<!-- 50  --><td>Insufficient detail</td>
+<!-- 0   --><td>Less than six reports are present</td>
+          </tr>
+   
+          <tr>
+            <th>Professionalism<br/>20%</th>
+<!-- 100 --><td>The report is professional, easy to read, and all the ideas are clearly communicated</td>
+<!-- 90  --><td>The writing style is "professional;" there are no grammar, spelling, or formatting errors</td>
+<!-- 70  --><td>There exists an instance of a spelling error, grammar error, overly verbose wording, poor formatting, or poor writing</td>
+<!-- 50  --><td>Multiple spelling, grammatical, formatting, or writing errors</td>
+<!-- 0   --><td>Gross spelling/grammar errors or other aspects of the writing 
+              that make the report difficult to read</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </body>
+</html>

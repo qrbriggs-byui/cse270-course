@@ -1,0 +1,155 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../site/style.css" />
+    <title>CSE 270: W05 Plan: Quality Measurements</title>
+  </head>
+  <body>
+    <header id="courseTitle">
+      <span class="icon-byui-logo"></span>
+      <h1>CSE 270: W05 Plan: Quality Measurements</h1>
+    </header>
+    <article>
+
+      <p>&quot;Quality&quot; is a relative term. It means different things in different contexts. What is quality for a mobile game (Entertaining) might not be the same for an ATM machine (Secure, Reliable). The first step in any Q/A process is to precisely define the quality of the product.<br>
+Quality Characteristics and Models are developed and created using bottom-up design when developing requirements. In order to understand the difference of top-down design and bottom-up design, let&rsquo;s talk a little about top-down. Top-down design is the process of taking a solution, like an idea for a program and breaking it down into smaller components, and then breaking those components down until they can be defined as functional requirements (what the product will do). Quality Characteristics and Models, or non-functional requirements work the other way, bottom-up. We identify a set of quality characteristics that describe, or we want for the product. The reading provides a good comprehensive list of 48+ characteristics, there are more. Once you have a list, you can categorize the characteristics or put them into groups, and label the group. Some of those groups can be group, and now you have a hierarchy of characteristics, much like the models you see in the reading. This is bottom-up design. <br>
+You can probably see that trying to do top-down design of quality characteristics would be a bit difficult, as you would not know where to start. Likewise doing a bottom-up design of functional requirements, would have the same problem, not knowing where to start. </p>
+      <h2>Part 1: Determining  Non-Functional Requirements</h2>
+      <p>You will need to pick a feature of your phone that you would like to test. The camera is out, as we did that exercise in week 02. I would recommend you use a feature that you can use the diagnosis application you downloaded. <br>
+        You will then identify a quality characteristic, &quot;<a href="http://airccse.org/journal/ijsea/papers/5614ijsea03.pdf">Software Quality Models</a>&quot; article as your guide that you will use to test the chosen feature. </p>
+      <ul type="disc">
+        <li>How would      you measure the characteristic? Nominal, Ordinal, Interval, or Ratio      scale.</li>
+        <li>How      accurate must it be?</li>
+        <li>What      type of inputs does it need?</li>
+        <li>What      type of conditions (environmental, internal state, non-human instrument, etc)      might affect the measurement? </li>
+      </ul>
+      <p>These questions and ones like it will be difficult to answer. You will need to think deeply about how you use your phone and about the needs of the applications you use. You will also need to conduct some research as to standards pertaining to the touch screen.<br>
+        Once you have finished researching your quality characteristics, write a requirement, story or purpose for testing your requirement. <br>
+        When you are finished, you and your partner(s) need to have a list of the quality requirements for the touch screen. Each one must be categorized by the aforementioned article's quality metrics. Each one must also be stated in such a way that it is unambiguous if a given touch screen meets the quality requirements. Please cite any resources that helped you arrive at the requirement (besides the reading, find at least one more).<br>
+        For example, one quality requirement may read: &quot;Reliability: The touch screen must function at 100% capacity between 0°C and 35°C (<a href="https://www.interelectronix.com/touch-screen-extended-temperature.html">Interelectronix</a>)&quot;<br>
+        You should have at least five requirements.</p>
+      <h2>Part 2: Create Test Cases</h2>
+      <p>Based on what we previously learned about testing techniques, generate at least one test for each requirement. Each of these tests can be performed manually with your phone, or with the sensor app you installed on your phone earlier in the week.<br>
+        Each test must consist of the following components:</p>
+      <ol start="1" type="1">
+        <li><strong>Test Name</strong>:      Just like naming variable, function, class and variable names, a title should describe the test.</li>
+        <li><strong>Test ID:</strong> The ID uniquely identifies the test from the other tests. An id might include a relationship to the component or unit of the program and the version of the test. </li>
+        <li>Purpose/Description: As with any documentation, you need to state the purpose or decription of the test. </li>
+        <li><strong>Verification Requirement: </strong> What is this test going to verify? The feature requirement, story, or quality statement that this test is meant to verify. As part of this assignment your requirement should be a non-functional requirement, based on a quality characteristic. If the test is verifing more than one, the requirements need to have a unique identification. </li>
+        <li><strong>Outcome</strong>:      What is the expected outcome? What should the person conducting the test      look for?</li>
+        <li><strong>Pre-Conditions</strong>: Before starting any set of test steps, there are typically setup instructions, pre-requisite or dependancy tests, i.e. initial system test case. Sometimes it is simple as stating any assumptions about the starting state of the system or application you are going to test on or with.</li>
+        <li><strong>Steps</strong>:      The steps one must perform to carry out the test. These steps must be      precise, so anyone can conduct the test the way you envision. Remember to      use the Action/Result or Action/Verify pattern. 
+          <ol>
+            <li>Action Step: What is the testing going to do. It should provide a target and an action. There needs to be enought detail that grandma would know what to do. </li>
+            <li>Results Step: After each step, there should be something that happened. You push a button, or click a link; the results is the effect of that action. In more detailed test cases, the plan would present two areas for results, expected and actual. The tester executes the action, checks the expected results, and if it is different they fill in the actual results. Since most test case stop when the actual results is different then the expect, for this exercise we are only worried about expected results.</li>
+            <li>Pass/Fail or Verify Step: Verify Step is used to determine if the set of Action/Results steps have verified the requirement. Depending on the format of a test case plan, this is a simple indication of the Results passing or failing. The main thing to note is that Verify replaces Results and is tied to the requirement. </li>
+          </ol>
+        </li>
+      </ol>
+      <p>For example, here is a test written for Internships:</p>
+      <ul>
+        <li><strong>Test Title: </strong>Internship Registration Approval.</li>
+        <li><strong>Test ID:</strong> CSE-398-Internship_Approval-2022.02 </li>
+        <li><strong>Purpose</strong>: How to register for the internship class</li>
+        <li><strong>Verification Requirement</strong>: 
+          <ul>
+            <li>Requirement Example: Students shall request approval for a job in order to register for CSE 398</li>
+            <li>Story Example: As a student, I want my internship job to be approved so that I can register for CSE 398 Internship        </li>
+          </ul>
+        </li>
+        <li><strong>Pre-conditions</strong>: </li>
+        <ul>
+          <li>Web Browser with connection to byui.edu</li>
+          <li>An identical request has not been made.</li>
+        </ul>
+        <li><strong>Steps</strong></li>
+        <ul>
+          <li><strong>Action</strong>: Log into iPlan.byui.edu</li>
+          <ul>
+            <li><strong>Results</strong>: Browser is open with a web page </li>
+          </ul>
+          <li><strong>Action</strong>: Click on the Internship Approval panel link</li>
+          <ul>
+            <li><strong>Results</strong>: The internship Approval page shows up</li>
+          </ul>
+          <li><strong>Action</strong>: Click on the &ldquo;Create an Internship Request&rdquo; link</li>
+          <ul>
+            <li><strong>Results</strong>: The internship Registration Information page appears</li>
+          </ul>
+          <li>…</li>
+          <li><strong>Action</strong>: Look over the form to see that you have to fill out all of the required fields, then press the Submit button. </li>
+          <ul>
+            <li><strong>Verify</strong>: Form is submitted and shows up on the Internship Approval page</li>
+          </ul>
+          <li>…</li>
+          <li><strong>Action</strong>: In two days, check back to see if the request has been approved.</li>
+          <ul>
+            <li><strong>Verify</strong>: When the time for registration occurs, it is possible to register for CSE 398</li>
+          </ul>
+          <li>&nbsp;</li>
+        </ul>
+      </ul>
+      <h2>Submission<br>
+        </h2><p>Your team will submit one document here. The document must be in PDF format and professionally formatted. A professionally-formatted document includes but is not limited to:</p>
+      <ul type="disc">
+        <li>Used of the correct format and all test case elements are present </li>
+        <li>Free of      spelling and grammatical errors.</li>
+        <li>The      information in the document is well organized.</li>
+        <li>Everything      is in the third person; no &quot;I&quot;s or &quot;you&quot;s.</li>
+        <li>Character      and paragraph formatting is intentional and consistent across the      document.</li>
+      </ul>
+<h2>Assessment</h2>
+      <p>Your submission will be evaluated according to the following rubric:</p>
+      <table class="rubric">
+        <tbody>
+          <tr>
+            <th>&nbsp;</th>
+            <th>Exceptional<br/>100%</th>
+            <th>Good<br/>90%</th>
+            <th>Acceptable<br/>70%</th>
+            <th>Developing<br/>50%</th>
+            <th>Missing<br/>0%</th>
+          </tr>
+          <tr>
+            <th>Quality Requirements<br/>40%</th>
+<!-- 100 --><td>The quality requirements perfectly capture what is needed for the subject</td>
+<!-- 90  --><td>All the important quality requirements are covered</td>
+<!-- 70  --><td>Each of the quality requirements are well-formed</td>
+<!-- 50  --><td>Elements of the solution exist</td>
+<!-- 0   --><td>Requirements are missing</td>
+          </tr>
+          <tr>
+            <th>Test Cases<br/>40%</th>
+<!-- 100 --><td>Each of the test cases are well thought out</td>
+<!-- 90  --><td>Every requirement has a well-formed test case</td>
+<!-- 70  --><td>There exists at least one well-formed test case</td>
+<!-- 50  --><td>Elements of the solution exist</td>
+<!-- 0   --><td>Test cases are missing</td>
+          </tr>
+          <tr>
+            <th>Citations<br/>10%</th>
+<!-- 100 --><td>Everything is fully cited and all the citations are from high-quality sources</td>
+<!-- 90  --><td>Everything is fully cited</td>
+<!-- 70  --><td>There exists a few missing citations or some citations are of insufficient quality</td>
+<!-- 50  --><td>There are a few citations </td>
+<!-- 0   --><td>No citations</td>
+          </tr>
+          <tr>
+            <th>Professionalism<br/>10%</th>
+<!-- 100 --><td>The report is professional, easy to read, and all the ideas are clearly communicated</td>
+<!-- 90  --><td>The writing style is "professional;" there are no grammar, spelling, or formatting errors</td>
+<!-- 70  --><td>There exists an instance of a spelling error, grammar error, 
+              overly verbose wording, poor formatting, or poor writing</td>
+<!-- 50  --><td>Multiple spelling, grammatical, formatting, or writing errors</td>
+<!-- 0   --><td>Gross spelling/grammar errors or other aspects of the writing 
+              that make the report difficult to read</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </body>
+</html>
