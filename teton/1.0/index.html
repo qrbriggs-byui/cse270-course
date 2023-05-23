@@ -14,6 +14,7 @@
     <script src="./scripts/main.js" defer></script>
   </head>
   <body>
+    <div id="content">
     <!-- This is a comment -->
     <header>
       <div id="meet-greet">🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</div>
@@ -37,8 +38,6 @@
         </button>
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-          <!-- <li><a href="discover.html">Discover</a></li>
-          <li><a href="directory.html">Directory</a></li> -->
           <li><a href="join.html">Join</a></li>
         </ul>
       </nav>
@@ -46,27 +45,28 @@
     </header>
     <main class="home-main">
       <section id="nopad" class="main-hero">
-        <h3>Welcome to our Beautiful City!</h3>
+        <h2>Welcome to our Beautiful City!</h2>
         <a href="join.html" class="a-button">Join Us!</a>
       </section>
       <section class="main-event">
+        <h1>Local Events</h1>
         <h3>Haunted Mill Closed for Season</h3>
         <p class="centered-image"><img src="./images/haunted-mill.png" alt="The haunted mill in Teton Idaho"></p>
         <p>After a successful 2022 with hundreds of satisfied customers, the Haunted Mill has closed for the season.</p>
         <p>Be sure to join us in fall of 2023 for even more frights and scares!</p>
       </section>
       <section class="main-weather">
-        <h2>Weather</h2>
+        <h1>Weather</h1>
         <div>
             <img id="weathericon" src="./images/sunny.png" alt="weather icon">
-            <h2><span id="temperature">?</span>&deg; F</h2>
+            <h2><span id="temperature">45</span>&deg; F</h2>
         </div>
-        <h2 id="weatherdesc">?</h2>
+        <h2 id="weatherdesc">Sunny</h2>
         <hr>
-        <h3>Wind Speed: <span id="windspeed">?</span> mph</h3>
-        <h3>Wind Chill: <span id="windchill">?</span>&deg; F</h3>
+        <h3>Wind Speed: <span id="windspeed">3</span> mph</h3>
     </section>  
       <section class="main-news">
+        <h1>Current News</h1>
         <h3>Race to the Moon at Teton Elementary</h3>
         <p class="centered-image"><img src="./images/teton-elementary-ice-320.jpg" alt="Teton Elementary school children playing"></p>
         <p>Teton Elementary in Teton, Idaho started a "Race to the Moon" project last September to promote physical activity while learning about space. </p>
@@ -76,10 +76,11 @@
         <p>"We need everyone's help! Could you please help us spread the word to the public by promoting our activity?"</p>
         <p>Courtsey of <a href="https://localnews8.com/news/local-news/2023/01/18/teton-elementary-on-the-way-to-the-moon/">localnews8.com</a></p>
       </section>      
-      <section class="main-spotlight">    
+      <section class="main-spotlight">   
+        <h1>Spotlighted Businesses</h1> 
       </section>
       <section class="main-join">
-        <h3>Join Us</h3>
+        <h1>Join Us</h1>
         <p>Join the Teton Chamber of Commerce and experience all of the helpful benefits.</p> 
         <p><a href="join.html" class="a-button">Join Us!</a></p>
       </section>     
@@ -94,17 +95,13 @@
           <p>123 Main Street<br >Teton, ID 83451</p>
           <p><a href="mailto:notavalidaddress@nowhere.email">info@tetonchamber.org</a></p>
           <p>208-458-4444</p>
-          <p>Weather Data courtesy of <a href="https://openweathermap.org/">OpenWeatherMap</a></p>
         </div>
         <div class="footer-map">
           <p><img src="./images/google-maps.png" alt="Google maps icon"></p>
           <a href="https://goo.gl/maps/b17zTF1NkiE4FevSA" target="_blank">Location Map</a>
         </div>
       </div>
-      <hr >
-      <div class="footer-base">
-        <p>&copy; <span id="currentyear"></span> | Quinn R. Briggs | Rexburg, ID | Last Updated: <span id="lastmodified"></span></p>
-      </div>
     </footer>
+  </div>
   </body>
 </html>
