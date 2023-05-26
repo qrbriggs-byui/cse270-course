@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teton Idaho Chamber of Commerce Home Page</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js" defer></script>    
+  </head>
+  <body>
+    <header>
+      <div id="main">
+        <picture>
+          <source media="(min-width: 680px)" srcset="./images/teton-coc-small.jpg">
+          <img src="./images/teton-coc-48x48.png" />
+        </picture>
+        <div>
+          <h1>Teton Idaho Chamber of Commerce</h1>
+        </div>
+        <picture>
+          <a href="facebook.com"><img src="./images/facebook.png" /></a>
+          <a href="instagram.com"><img src="./images/instagram.png" /></a>
+        </picture>
+      </div>
+      <div id="nav">
+        <button id="hamburger-button">&equiv;</button>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li class="active"><a href="join.html">Join</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h3 class="thankyou">Thank you for joining the chamber! We're excited to have you with us.</h3>
+        <div class="join-confirm">            
+            <div>Name:</div><div><span id="fullname"></span></div>
+            <div>Email:</div><div><span id="email"></span></div>
+            <div>Cell Phone:</div><div><span id="cellphone"></span></div>
+            <div>Membership Level Chosen:</div><div><span id="level"></span></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <picture>
+        <img src="./images/teton-coc-48x48.png">
+      </picture>
+      <h3>Teton Idaho Chamber of Commerce</h3>
+      <p>123 Main Street, Teton, ID 83451</p>
+      <p>info@tetonidahococ.org</p>
+      <p>&copy;<span id="currentyear"></span> Teton Idaho Chamber | Quinn Briggs | WDD 230 Project | Last Modified: <span id="lastmodified"></span></p>
+    </footer>
+  </body>
+  <script>    
+    let url = new URL(window.location);
+    let params  = url.searchParams;
+
+    for (const p of params) {
+      console.log(p);
+    }
+    
+    document.querySelector("#fullname").textContent = `${params.get('fname')} ${params.get('lname')}`;
+    document.querySelector("#email").textContent = params.get('email');
+    document.querySelector("#cellphone").textContent = params.get('cellphone');
+    document.querySelector("#level").textContent = params.get('level');
+  </script>
+</html>
