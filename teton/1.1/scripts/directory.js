@@ -39,7 +39,7 @@ const displayBusinesses = (businesss) => {
     <p>${business.name}</p>
     <p>${business.streetAddress}</p>
     <p>${business.cityStateZip}</p>
-    <p><a href="${business.websiteURL}">Website</a></p>
+    <p><a href="#${business.websiteURL}">Website</a></p>
     `;
     if (business.membershipLevel=='gold'){
       card.classList.add('gold-member');

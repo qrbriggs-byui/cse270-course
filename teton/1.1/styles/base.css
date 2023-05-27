@@ -13,6 +13,11 @@ body {
   background-color: var(--cream);
 }
 
+#content{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 header, footer{
     background-color: var(--light-green);
     border: 1px black solid;        
@@ -192,7 +197,7 @@ nav ul.menu-active{
     margin: 0;
 }
 
-.main-hero h3{
+.main-hero h2{
     background-color: var(--brown);
     margin-block-start: 0px;
     margin-block-end: 0px;
@@ -235,6 +240,10 @@ nav ul.menu-active{
     border: 2px solid black;
 }
 
+.main-event h1{
+    text-align: center;
+}
+
 .main-news{
     grid-area: n;
 }
@@ -247,6 +256,10 @@ nav ul.menu-active{
     border: 2px solid black;
 }
 
+.main-news h1{
+    text-align: center;
+}
+
 .main-weather{
     grid-area: w;
     text-align: center;
@@ -257,7 +270,7 @@ nav ul.menu-active{
     display: none;
 }
 
-.main-join p{
+.main-join p, .main-join h1{
     text-align: center;
 }
 
@@ -293,7 +306,7 @@ nav ul.menu-active{
     max-width: 100%;
 }
 
-.main-spotlight h4{
+.main-spotlight h4, .main-spotlight h1{
     text-align: center;
 }
 
@@ -436,10 +449,6 @@ label.myinput{
     margin: .5rem;
 }
 
-.directory-cards .gold-member{
-    box-shadow: inset 1rem 1rem gold;
-}
-
 /* List View */
 
 .directory-list{    
@@ -468,4 +477,12 @@ label.myinput{
     background-color: azure;
 }
 
+.thankyou{
+    text-align: center;    
+}
 
+.join-confirm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;        
+  }
