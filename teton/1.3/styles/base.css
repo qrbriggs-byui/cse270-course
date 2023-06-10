@@ -514,11 +514,11 @@ label.myinput{
 }
 
 a{
-    color: white;
-    text-decoration: none;
+    color: black;
+    text-decoration: underline;
 }
 
 a:visited{
     color: grey;
-    text-decoration: none;
+    text-decoration: underline;
 }
