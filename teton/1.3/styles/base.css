@@ -19,6 +19,16 @@ body {
     margin: 0 auto;
 }
 
+a{
+    color: black;
+    text-decoration: underline;
+}
+
+a:visited{
+    color: black;
+    text-decoration: underline;
+}
+
 header, footer{
     background-color: var(--light-green);
     border: 1px black solid;        
@@ -452,6 +462,14 @@ label.myinput{
     padding: 1rem;    
 }
 
+.directory-main a{    
+    color: grey;
+}
+
+.directory-main a:visited{    
+    color: grey;
+}
+
 .directory-list section img{
     display: none;
 }
@@ -513,12 +531,3 @@ label.myinput{
     font-size: 1.5rem;
 }
 
-a{
-    color: black;
-    text-decoration: underline;
-}
-
-a:visited{
-    color: grey;
-    text-decoration: underline;
-}
