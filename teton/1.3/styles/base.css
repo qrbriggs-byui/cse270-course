@@ -434,7 +434,7 @@ label.myinput{
     text-align: center;    
     border: 2px solid grey;    
     width: 300px;
-    background-color: #d49764;
+    background-color: #e06500;
     padding: 1rem;
     margin: .5rem;
 }
@@ -460,11 +460,11 @@ label.myinput{
 }
 
 .directory-list section:nth-child(odd) {
-    background-color: paleturquoise;
+    background-color: #e06500;
 }
 
 .directory-list section:nth-child(even) {
-    background-color: azure;
+    background-color: #db9760;
 }
 
   /* Thankyou Styling */
