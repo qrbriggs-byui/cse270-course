@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Ubuntu&display=swap");
 
 :root{
+    --darker-green: #767a66;
     --dark-green: #ccd5ae;
     --light-green: #e9edc9;
     --cream: #fefae0;
@@ -318,7 +319,7 @@ nav ul.menu-active{
 
 .discover-main section{
     border: 2px black solid;
-    margin: 1rem;
+    margin: 1rem;    
 }
 
 .discover-image{
@@ -400,6 +401,10 @@ label.myinput{
     border-color: #922;
   }
   
+
+  .thankyou-main section{
+    margin: 2rem 0rem;
+  }
 /* Directory Page Stuff */
 .directory-main{
     width: 100%;
@@ -414,7 +419,7 @@ label.myinput{
     padding: 1rem;
     margin: .5rem;
     border-radius: 5px;
-    background-color: grey;
+    background-color: var(--darker-green);
     border: 1px black solid;
 }
 
@@ -434,7 +439,7 @@ label.myinput{
     text-align: center;    
     border: 2px solid grey;    
     width: 300px;
-    background-color: #e06500;
+    background-color: var(--darker-green);
     padding: 1rem;
     margin: .5rem;
 }
@@ -460,11 +465,11 @@ label.myinput{
 }
 
 .directory-list section:nth-child(odd) {
-    background-color: #e06500;
+    background-color: var(--darker-green);
 }
 
 .directory-list section:nth-child(even) {
-    background-color: #db9760;
+    background-color: var(--dark-green);
 }
 
   /* Thankyou Styling */
@@ -506,4 +511,14 @@ label.myinput{
     margin: 2rem 1rem 1rem 0rem;
     padding: .5rem;
     font-size: 1.5rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:visited{
+    color: grey;
+    text-decoration: none;
 }
