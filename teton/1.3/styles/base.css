@@ -463,11 +463,11 @@ label.myinput{
 }
 
 .directory-main a{    
-    color: grey;
+    color: lightgrey;
 }
 
 .directory-main a:visited{    
-    color: grey;
+    color: lightgrey;
 }
 
 .directory-list section img{
