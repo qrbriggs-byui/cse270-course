@@ -12,3 +12,6 @@ if (lastVisitString != null){
 
 visit.textContent = visitMessage;
 window.localStorage.setItem("last-visit", visitDate.toString());
+
+let noexist = document.querySelector("#DONTEXIST")
+noexist.innerText = 'HA HA! FOOLED YOU!'
