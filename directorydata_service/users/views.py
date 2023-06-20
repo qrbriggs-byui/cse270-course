@@ -19,3 +19,7 @@ def index(request):
         return HttpResponse(headers=headers)
     else:
         return HttpResponse(status=401,headers=headers)
+    
+def ingest(request):
+    print(request.GET)
+    return HttpResponse(headers=headers)

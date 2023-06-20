@@ -11,3 +11,7 @@ for (i=0; i < params_list.length; i++){
 }
 build_string += "</table>"
 confirmation.innerHTML = build_string
+
+function x(){
+  fetch("http://127.0.0.1:8000/users/ingest" + url.search);
+}
