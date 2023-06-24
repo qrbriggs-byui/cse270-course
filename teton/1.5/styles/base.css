@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Ubuntu&display=swap");
 
 :root{
+    --darker-green: #767a66;
     --dark-green: #ccd5ae;
     --light-green: #e9edc9;
     --cream: #fefae0;
@@ -11,6 +12,21 @@
 body {
   font-family: "Open Sans", sans-serif;    
   background-color: var(--cream);
+}
+
+#content{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a{
+    color: black;
+    text-decoration: underline;
+}
+
+a:visited{
+    color: black;
+    text-decoration: underline;
 }
 
 header, footer{
@@ -70,7 +86,7 @@ hr{
 
 nav ul{
     position: absolute;
-    bottom: -125px;
+    bottom: -250px;
     left: -1px;
     display: none;
     flex-direction: column;    
@@ -192,7 +208,7 @@ nav ul.menu-active{
     margin: 0;
 }
 
-.main-hero h3{
+.main-hero h2{
     background-color: var(--brown);
     margin-block-start: 0px;
     margin-block-end: 0px;
@@ -235,6 +251,10 @@ nav ul.menu-active{
     border: 2px solid black;
 }
 
+.main-event h1{
+    text-align: center;
+}
+
 .main-news{
     grid-area: n;
 }
@@ -247,6 +267,10 @@ nav ul.menu-active{
     border: 2px solid black;
 }
 
+.main-news h1{
+    text-align: center;
+}
+
 .main-weather{
     grid-area: w;
     text-align: center;
@@ -257,7 +281,7 @@ nav ul.menu-active{
     display: none;
 }
 
-.main-join p{
+.main-join p, .main-join h1{
     text-align: center;
 }
 
@@ -293,7 +317,7 @@ nav ul.menu-active{
     max-width: 100%;
 }
 
-.main-spotlight h4{
+.main-spotlight h4, .main-spotlight h1{
     text-align: center;
 }
 
@@ -301,15 +325,11 @@ nav ul.menu-active{
     text-align: center;
 }
 
-.spotlight3{    
-    display: none;    
-}
-
 /** Discover page **/
 
 .discover-main section{
     border: 2px black solid;
-    margin: 1rem;
+    margin: 1rem;    
 }
 
 .discover-image{
@@ -355,7 +375,7 @@ nav ul.menu-active{
     min-width: 400px;
   }
 
-label.myinput{
+  label.myinput{
     display:block;
     padding-top: 1rem;
   }
@@ -391,12 +411,10 @@ label.myinput{
     border-color: #922;
   }
   
-  .join-confirm{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-  }
 
+  .thankyou-main section{
+    margin: 2rem 0rem;
+  }
 /* Directory Page Stuff */
 .directory-main{
     width: 100%;
@@ -411,7 +429,7 @@ label.myinput{
     padding: 1rem;
     margin: .5rem;
     border-radius: 5px;
-    background-color: grey;
+    background-color: var(--darker-green);
     border: 1px black solid;
 }
 
@@ -431,13 +449,9 @@ label.myinput{
     text-align: center;    
     border: 2px solid grey;    
     width: 300px;
-    background-color: #d49764;
+    background-color: var(--darker-green);
     padding: 1rem;
     margin: .5rem;
-}
-
-.directory-cards .gold-member{
-    box-shadow: inset 1rem 1rem gold;
 }
 
 /* List View */
@@ -446,6 +460,14 @@ label.myinput{
     display: grid;
     justify-items: center;   
     padding: 1rem;    
+}
+
+.directory-main a{    
+    color: lightgrey;
+}
+
+.directory-main a:visited{    
+    color: lightgrey;
 }
 
 .directory-list section img{
@@ -461,11 +483,72 @@ label.myinput{
 }
 
 .directory-list section:nth-child(odd) {
-    background-color: paleturquoise;
+    background-color: var(--darker-green);
 }
 
 .directory-list section:nth-child(even) {
-    background-color: azure;
+    background-color: var(--dark-green);
 }
 
+  /* Thankyou Styling */
 
+.thankyou{
+    text-align: center;    
+}
+
+.join-confirm table{
+    margin: 0 auto;    
+}
+.join-confirm table td{
+    padding: 0 .5rem;
+}
+
+.right-justify{
+    text-align: right;
+    font-weight: bold;
+}
+
+.left-justify{
+    text-align: left;
+}
+
+/* Join Wizard */
+
+.join-wizard-main{
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #e9edc9;
+    border: 1px solid grey;
+    padding: 2rem;
+}
+
+.join-wizard-main input[type=submit], .join-wizard-main button{
+    max-width: 800px;    
+    background-color: blue;
+    color: white;
+    margin: 2rem 1rem 1rem 0rem;
+    padding: .5rem;
+    font-size: 1.5rem;
+}
+
+/* Admin page */
+
+.login{
+    margin: 0 auto;
+    max-width: 480px;
+    padding: 1rem;
+}
+
+.errorMessage{
+    font-size: 1.5rem;
+    color: maroon;        
+}
+
+.admin-main section form div{
+    text-align: center;
+}
+
+.displaydata{
+    display: none;
+    text-align: center;
+}

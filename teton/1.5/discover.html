@@ -14,31 +14,33 @@
     <script src="./scripts/discover.js" defer></script>    
   </head>
   <body>
+    <div id="content">
     <header>
       <div id="meet-greet">🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</div>
       <div class="header-top">        
           <div class="header-logo">
-            <a href="index.html"><img src="./images/teton-logo-150.webp" /></a>            
+            <a href="index.html"><img src="./images/teton-logo-150.webp" alt="Teton Chamber of Commerce Logo"></a>            
           </div>          
           <div class="header-title">
             <h1>Teton Idaho</h1>
             <h2>Chamber of Commerce</h2>
           </div>
           <div class="header-icons">
-            <a href="https://www.instagram.com" target="_blank"><img src="./images/instagram-40.png" /></a>
-            <a href="https://www.pinterest.com" target="_blank"><img src="./images/pinterest-40.png" /></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="./images/instagram-40.png" alt="instagram logo"></a>
+            <a href="https://www.pinterest.com" target="_blank"><img src="./images/pinterest-40.png" alt="facebook logo"></a>
           </div>
       </div>
       <nav>
         <button id="hamburger-menu">
-          <span id="hamburger-x"><img src="./images/hamburger-close.png"></span>
-          <span id="hamburger-equiv"><img src="./images/hamburger.png"></span>
+          <span id="hamburger-x"><img src="./images/hamburger-close.png" alt="hamburger menu image"></span>
+          <span id="hamburger-equiv"><img src="./images/hamburger.png" alt="hamburger menu image"></span>
         </button>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="discover.html" class="active">Discover</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
           <li><a href="directory.html">Directory</a></li>
           <li><a href="join.html">Join</a></li>
+          <li><a href="admin.html">Admin</a></li>
         </ul>
       </nav>
       <div class="header-today"><p></p></div>
@@ -55,7 +57,7 @@
       <section class="discover-image">
         <div>
           <picture>
-            <img src="./images/discover/cemetery.jpg" alt="Veterans memorial at Teton-Newdale Cemetery" height="533" width="800">
+            <img src="./images/discover/cemetery.jpg" alt="Veterans memorial at Teton-Newdale Cemetery" loading='lazy' height="533" width="800">
           </picture>
         </div>
         <div>
@@ -129,5 +131,6 @@
         <p>&copy; <span id="currentyear"></span> | Quinn R. Briggs | Rexburg, ID | Last Updated: <span id="lastmodified"></span></p>
       </div>
     </footer>
+  </div>
   </body>
 </html>

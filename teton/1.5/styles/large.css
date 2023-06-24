@@ -7,24 +7,14 @@
         flex-direction: row;
     }
 
-    .home-main{
+    /* .home-main{
         display: grid;
         grid-template-areas: "e h h x"
                              "w h h x"
                              "j n n x";
-    }    
+    }     */
 
-    .spotlight3{    
-        display: block;    
-    } 
 
-    .main-spotlight{
-        flex-direction: column;        
-    }
-
-    .main-spotlight div{
-        height: 33%;
-    }
 
     #hamburger-menu{
         display: none;
@@ -47,7 +37,7 @@
         position: relative;      
         background-image: url('../images/teton-river-1200.jpg');    
         background-position: center;
-        height: auto;        
+        height: 600px;        
     }
 
     .discover-main img {
