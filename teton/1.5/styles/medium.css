@@ -47,10 +47,6 @@
         width: 20%;
     }    
 
-    .spotlight3{    
-        display: block;    
-    } 
-
     .main-spotlight{
         flex-direction: column;        
     }
