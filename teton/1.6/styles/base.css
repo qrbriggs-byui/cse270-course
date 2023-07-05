@@ -281,8 +281,7 @@ nav ul.menu-active{
 }
 
 .main-join{
-    grid-area: j;
-    display: none;
+    grid-area: j;    
 }
 
 .main-join p, .main-join h1{
