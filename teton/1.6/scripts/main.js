@@ -77,12 +77,17 @@ getBusinessData();
 
 function doJoinFlag(){
   let join_flag = localStorage.getItem("join_flag")
+  if (join_flag == null){
+    return;
+  }
+  document.querySelector(".join-original").style.display = 'none';    
+  document.querySelector(".join-new").style.display = 'none';
   if (join_flag == 'enabled'){
-    document.querySelector(".join-original").style.display = 'none';    
+    document.querySelector(".join-new").style.display = 'block';    
   }
   if (join_flag == 'disabled'){
-    document.querySelector(".join-new").style.display = 'none';
+    document.querySelector(".join-original").style.display = 'block';
   }
 }
 
-doJoinFlag()
+doJoinFlag();
