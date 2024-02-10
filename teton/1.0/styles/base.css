@@ -250,6 +250,12 @@ nav ul.menu-active{
 
 .centered-image{
     text-align: center;
+    min-width: 800px;
+}
+
+.centered-image img{
+    width: 110%;
+    /* height: 50%; */
 }
 
 .main-news img{

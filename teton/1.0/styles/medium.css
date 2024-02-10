@@ -18,6 +18,16 @@
         display: flex;
     }
 
+    .centered-image{
+        text-align: center;
+        min-width: none;
+    }
+    
+    .centered-image img{
+        width: auto;
+    }
+    
+
     .main-hero{
         grid-area: h;
         position: relative;      
