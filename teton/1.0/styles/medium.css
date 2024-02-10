@@ -1,6 +1,11 @@
 /** Medium.css **/
 @media (min-width: 800px){
     
+    body {
+        font-size: 16px;
+      }
+      
+
     .main-join{
         display: block;
     }    
