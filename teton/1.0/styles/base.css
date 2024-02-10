@@ -354,9 +354,14 @@ nav ul.menu-active{
 }
 
 /*** Join page ***/
-.join{
+/* .join{
     display: grid;    
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  } */
+
+  section.join {
+    max-width: 600px;
+    margin: 0 auto;
   }
 
   .join > div{
