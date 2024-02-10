@@ -207,7 +207,7 @@ nav ul.menu-active{
 .a-button{
     position: absolute;
     top: 50px;
-    right: 50px;
+    left: 50px;
     font-size: 1.5rem;
     padding: .5rem;
     background-color: var(--tan);
