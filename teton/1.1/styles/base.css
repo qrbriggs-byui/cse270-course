@@ -75,7 +75,7 @@ hr{
 
 nav ul{
     position: absolute;
-    bottom: -125px;
+    bottom: -180px;
     left: -1px;
     display: none;
     flex-direction: column;    
@@ -207,7 +207,7 @@ nav ul.menu-active{
 .a-button{
     position: absolute;
     top: 50px;
-    right: 50px;
+    left: 50px;
     font-size: 1.5rem;
     padding: .5rem;
     background-color: var(--tan);
@@ -249,7 +249,11 @@ nav ul.menu-active{
 }
 
 .centered-image{
-    text-align: center;
+    text-align: center;    
+}
+
+.centered-image img{
+    height: 50%;
 }
 
 .main-news img{
@@ -314,10 +318,6 @@ nav ul.menu-active{
     text-align: center;
 }
 
-.spotlight3{    
-    display: none;    
-}
-
 /** Discover page **/
 
 .discover-main section{
@@ -354,9 +354,14 @@ nav ul.menu-active{
 }
 
 /*** Join page ***/
-.join{
+/* .join{
     display: grid;    
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  } */
+
+  section.join {
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   .join > div{
@@ -404,15 +409,21 @@ label.myinput{
     border-color: #922;
   }
   
-  .join-confirm{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
+  .join-confirm table{
+    margin: 1rem auto;
+    border-collapse: collapse;
+    border:1px black solid;        
+  }
+
+  .join-confirm table td{
+    border:1px black solid;    
+    padding: .5rem;
   }
 
 /* Directory Page Stuff */
 .directory-main{
     width: 100%;
+    text-align: center;
 }
 
 #directory-selector{
@@ -481,8 +492,3 @@ label.myinput{
     text-align: center;    
 }
 
-.join-confirm{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;        
-  }

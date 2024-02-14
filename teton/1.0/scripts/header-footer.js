@@ -1,7 +1,8 @@
 // This sets today's date in the header
-let fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeStyle: "short" }).format( new Date() );
+let now = new Date()
+let fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "medium", timeStyle: "short" }).format(  );
 if (navigator.userAgent.toLowerCase().indexOf('firefox') != -1){
-    fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "long", timeStyle: "long" }).format( new Date() );       
+    fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "long", timeStyle: "long" }).format( now );       
 }
 
 document.querySelector(".header-today p").textContent = fulldate;
