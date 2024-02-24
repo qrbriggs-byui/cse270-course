@@ -1,5 +1,4 @@
 // Toggle active/not active buttons
-
 var gridSelector = document.querySelector('#directory-grid');
 var listSelector = document.querySelector('#directory-list');
 var directoryData = document.querySelector('#directory-data');
