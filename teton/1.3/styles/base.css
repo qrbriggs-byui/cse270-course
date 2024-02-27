@@ -86,7 +86,7 @@ hr{
 
 nav ul{
     position: absolute;
-    bottom: -250px;
+    bottom: -180px;
     left: -1px;
     display: none;
     flex-direction: column;    
@@ -218,7 +218,7 @@ nav ul.menu-active{
 .a-button{
     position: absolute;
     top: 50px;
-    right: 50px;
+    left: 50px;
     font-size: 1.5rem;
     padding: .5rem;
     background-color: var(--tan);
@@ -261,6 +261,10 @@ nav ul.menu-active{
 
 .centered-image{
     text-align: center;
+}
+
+.centered-image img{
+    height: 50%;
 }
 
 .main-news img{
@@ -329,7 +333,7 @@ nav ul.menu-active{
 
 .discover-main section{
     border: 2px black solid;
-    margin: 1rem;    
+    margin: 1rem;
 }
 
 .discover-image{
@@ -418,6 +422,7 @@ label.myinput{
 /* Directory Page Stuff */
 .directory-main{
     width: 100%;
+    text-align: center;
 }
 
 #directory-selector{
@@ -463,11 +468,11 @@ label.myinput{
 }
 
 .directory-main a{    
-    color: lightgrey;
+    color: blue;
 }
 
 .directory-main a:visited{    
-    color: lightgrey;
+    color: blue;
 }
 
 .directory-list section img{

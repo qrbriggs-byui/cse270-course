@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Ubuntu&display=swap");
 
 :root{
+    --darker-green: #767a66;
     --dark-green: #ccd5ae;
     --light-green: #e9edc9;
     --cream: #fefae0;
@@ -16,6 +17,16 @@ body {
 #content{
     max-width: 1200px;
     margin: 0 auto;
+}
+
+a{
+    color: black;
+    text-decoration: underline;
+}
+
+a:visited{
+    color: black;
+    text-decoration: underline;
 }
 
 header, footer{
@@ -249,7 +260,7 @@ nav ul.menu-active{
 }
 
 .centered-image{
-    text-align: center;    
+    text-align: center;
 }
 
 .centered-image img{
@@ -435,7 +446,7 @@ label.myinput{
     padding: 1rem;
     margin: .5rem;
     border-radius: 5px;
-    background-color: grey;
+    background-color: var(--darker-green);
     border: 1px black solid;
 }
 
@@ -455,7 +466,7 @@ label.myinput{
     text-align: center;    
     border: 2px solid grey;    
     width: 300px;
-    background-color: #d49764;
+    background-color: var(--darker-green);
     padding: 1rem;
     margin: .5rem;
 }
@@ -466,6 +477,14 @@ label.myinput{
     display: grid;
     justify-items: center;   
     padding: 1rem;    
+}
+
+.directory-main a{    
+    color: lightgrey;
+}
+
+.directory-main a:visited{    
+    color: lightgrey;
 }
 
 .directory-list section img{
@@ -481,11 +500,11 @@ label.myinput{
 }
 
 .directory-list section:nth-child(odd) {
-    background-color: paleturquoise;
+    background-color: var(--darker-green);
 }
 
 .directory-list section:nth-child(even) {
-    background-color: azure;
+    background-color: var(--dark-green);
 }
 
 .thankyou{
