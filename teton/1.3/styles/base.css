@@ -468,11 +468,11 @@ label.myinput{
 }
 
 .directory-main a{    
-    color: blue;
+    color: lightgray;
 }
 
 .directory-main a:visited{    
-    color: blue;
+    color: lightgray;
 }
 
 .directory-list section img{
