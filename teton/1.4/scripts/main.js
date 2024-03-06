@@ -1,16 +1,8 @@
-// Show the meet-greet message on Tue/Thu
-// Date.getDay() uses a 0 based index to return the day of the week
-var messagedate = new Date();
-if (messagedate.getDay() == 2 || messagedate.getDay() == 4) {
-  document.querySelector("#meet-greet").classList.add("active");
-}
-
 // select HTML elements in the document
 const weatherIcon = document.querySelector("#weathericon");
 const weatherDesc = document.querySelector("#weatherdesc");
 
 function displayResults(weatherData) {
-  // You can use @2x or @4x to make the icon bigger, or omit it for the standard size
   const iconsrc = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@4x.png`
   const desc = weatherData.weather[0].description;
   const main = weatherData.weather[0].main;
@@ -39,8 +31,7 @@ getTheWeather();
 function displaySpotlights(businessList){
   spotlights = []
   for (let i=0; i < 3; i++){
-    var elt = Math.floor(Math.random() * businessList.length)
-    spotlights.push(businessList.splice(elt, 1)[0]);
+    spotlights.push(businessList[i]);
   }
 
   // Now display stuff  
