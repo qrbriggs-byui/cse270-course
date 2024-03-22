@@ -11,10 +11,10 @@ const DIRECTORY_DATA_URL_PROD = "<PRODUCTION_URL_HERE>";
 const DIRECTORY_DATA_URL_STUB = "./data/business.json";
 const DIRECTORY_DATA_URL_TEST = "http://127.0.0.1:8000/data/all";
 
-const businessDataUrl = DIRECTORY_DATA_URL_STUB;
+const businessDataUrl = DIRECTORY_DATA_URL_TEST;
 
 const USER_DATA_URL_PROD = "<PRODUCTION_URL_HERE>";
 const USER_DATA_URL_TEST = "http://127.0.0.1:8000/users/";
-const USER_DATA_URL_STUB = "./data/users.noexist.json";
+const USER_DATA_URL_STUB = "./data/users.json";
 
-const userDataUrl = USER_DATA_URL_STUB;
+const userDataUrl = USER_DATA_URL_TEST;

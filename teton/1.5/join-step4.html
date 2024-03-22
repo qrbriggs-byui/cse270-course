@@ -36,9 +36,8 @@
         </button>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="discover.html">Discover</a></li>
-          <li><a href="directory.html">Directory</a></li>
           <li><a href="join.html" class="active">Join</a></li>
+          <li><a href="directory.html">Directory</a></li>
           <li><a href="admin.html">Admin</a></li>
         </ul>
       </nav>
@@ -51,9 +50,10 @@
             <form action="thankyou.html" method="GET">
                 <fieldset>                    
                     <legend>Describe your business to us. We will use this information in your spotlight!</legend>                    
-                    <label class="myinput">Website URL<input type="url" name="websiteURL" required></label>                    
+                    <label class="myinput">Website URL<input type="text" name="websiteURL" required></label>                    
                     <label class="myinput">Business Description<textarea name="description" cols="40" rows="5"></textarea></label>
                     <label><input id="currentdate" type="hidden" name="currentdate" value=""></label>
+                    <button onclick="history.back()">Previous Step</button>
                     <input type="submit" name="submit" value="Join the Chamber!">
                 </fieldset>
             </form>

@@ -86,7 +86,7 @@ hr{
 
 nav ul{
     position: absolute;
-    bottom: -300px;
+    bottom: -250px;
     left: -1px;
     display: none;
     flex-direction: column;    
@@ -323,10 +323,6 @@ nav ul.menu-active{
 
 .main-spotlight p{
     text-align: center;
-}
-
-.spotlight3{
-    display: none;
 }
 
 /** Discover page **/
