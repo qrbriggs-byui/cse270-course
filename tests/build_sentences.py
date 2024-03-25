@@ -66,7 +66,7 @@ def fix_agreement(sentence):
         if word == "a":
             first_letter = sentence[index + 2][0]
             if first_letter in "aeiou":
-                sentence[index] == 'an'
+                sentence[index] = 'an'
         # Rule 3: 'The' at the beginning of the sentence needs a verb update 4 words later to add an 's'
         if word == "the" and index == 0:            
             sentence[index + 4] = sentence[index + 4] + "s"

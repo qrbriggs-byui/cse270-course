@@ -3,6 +3,11 @@ import psycopg2
 
 some_list = ['alpha','beta','gamma','delta']
 
+def find_and_replace(some_list, find, replace):
+    # Finds and replaces the items passed in
+    # Raises ValueError when the item is not found
+    some_list[some_list.index(find)] = replace
+
 def get_random_item():
     return random.choice(some_list)
 

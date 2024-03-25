@@ -1,12 +1,25 @@
 import pytest
 
 from examples import (
+    find_and_replace,
     get_random_item,
     gather_input,
     get_data_from_file,
     get_user_id_1,
     some_list
 )
+
+## test for a function with side-effects (like modifying a list)
+def test_find_and_replace():
+    mylist = ['apples','oranges']
+    find_and_replace(mylist, 'apples', 'bananas')    
+    assert mylist[0] == 'bananas'
+
+## test for a raised exception
+def test_find_and_replace_error():
+    mylist = ['apples','oranges']
+    with pytest.raises(ValueError):
+        find_and_replace(mylist, 'bananas', 'pears')
 
 ## test for a choice that falls within the list "some_list" from the example
 def test_get_random_item_no_mock():
